@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'twelveways2017-icons';
+  src:  url('fonts/twelveways2017-icons.eot?p36b12');
+  src:  url('fonts/twelveways2017-icons.eot?p36b12#iefix') format('embedded-opentype'),
+    url('fonts/twelveways2017-icons.ttf?p36b12') format('truetype'),
+    url('fonts/twelveways2017-icons.woff?p36b12') format('woff'),
+    url('fonts/twelveways2017-icons.svg?p36b12#twelveways2017-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'twelveways2017-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-american_express:before {
+  content: "\41";
+}
+.icon-bitcoin:before {
+  content: "\42";
+}
+.icon-cirrus:before {
+  content: "\43";
+}
+.icon-discover:before {
+  content: "\44";
+}
+.icon-fancy:before {
+  content: "\46";
+}
+.icon-interac:before {
+  content: "\49";
+}
+.icon-jcb:before {
+  content: "\4a";
+}
+.icon-master_card:before {
+  content: "\4d";
+}
+.icon-paypal:before {
+  content: "\50";
+}
+.icon-stripe:before {
+  content: "\53";
+}
+.icon-twitter:before {
+  content: "\54";
+}
+.icon-visa:before {
+  content: "\56";
+}
+.icon-diners_club:before {
+  content: "\63";
+}
+.icon-dankort:before {
+  content: "\64";
+}
+.icon-facebook:before {
+  content: "\66";
+}
+.icon-maestro:before {
+  content: "\6d";
+}
+.icon-pinterest:before {
+  content: "\70";
+}
+.icon-rss:before {
+  content: "\72";
+}
+.icon-search:before {
+  content: "\73";
+}
+.icon-tumblr:before {
+  content: "\74";
+}
+.icon-vimeo:before {
+  content: "\76";
+}
+.icon-youtube:before {
+  content: "\79";
+}
+.icon-cart:before {
+  content: "\e600";
+}
+.icon-hamburger:before {
+  content: "\e601";
+}
+.icon-grid-view:before {
+  content: "\e603";
+}
+.icon-list-view:before {
+  content: "\e604";
+}
+.icon-plus:before {
+  content: "\e605";
+}
+.icon-minus:before {
+  content: "\e602";
+}
+.icon-close-btn:before {
+  content: "\e606";
+}
+.icon-select-arrow-down:before {
+  content: "\e607";
+}
+.icon-amazon-payments:before {
+  content: "\e800";
+}
+.icon-google-plus:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-dogecoin:before {
+  content: "\e904";
+}
+.icon-dwolla:before {
+  content: "\e905";
+}
+.icon-forbrugsforeningen:before {
+  content: "\e906";
+}
+.icon-litecoin:before {
+  content: "\e908";
+}
+.icon-right-arrow:before {
+  content: "\e900";
+}
+.icon-left-arrow:before {
+  content: "\e903";
+}
+
