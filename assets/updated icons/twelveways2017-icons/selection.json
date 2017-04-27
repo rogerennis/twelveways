@@ -12,8 +12,10 @@
           "american_express"
         ],
         "defaultCode": 65,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 1,
         "order": 13,
@@ -38,8 +40,10 @@
           "bitcoin"
         ],
         "defaultCode": 66,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 2,
         "order": 14,
@@ -64,8 +68,10 @@
           "cirrus"
         ],
         "defaultCode": 67,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 3,
         "order": 15,
@@ -90,8 +96,10 @@
           "discover"
         ],
         "defaultCode": 68,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 4,
         "order": 16,
@@ -116,8 +124,10 @@
           "fancy"
         ],
         "defaultCode": 70,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 5,
         "order": 17,
@@ -142,8 +152,10 @@
           "interac"
         ],
         "defaultCode": 73,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 6,
         "order": 18,
@@ -168,8 +180,10 @@
           "jcb"
         ],
         "defaultCode": 74,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 7,
         "order": 19,
@@ -268,8 +282,10 @@
           "paypal"
         ],
         "defaultCode": 80,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 9,
         "order": 21,
@@ -294,8 +310,10 @@
           "stripe"
         ],
         "defaultCode": 83,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 10,
         "order": 22,
@@ -320,8 +338,10 @@
           "twitter"
         ],
         "defaultCode": 84,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 11,
         "order": 23,
@@ -346,8 +366,10 @@
           "visa"
         ],
         "defaultCode": 86,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 12,
         "order": 24,
@@ -372,8 +394,10 @@
           "diners_club"
         ],
         "defaultCode": 99,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 13,
         "order": 25,
@@ -398,8 +422,10 @@
           "dankort"
         ],
         "defaultCode": 100,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 14,
         "order": 26,
@@ -423,8 +449,10 @@
           "facebook"
         ],
         "defaultCode": 102,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 15,
         "order": 27,
@@ -449,8 +477,10 @@
           "maestro"
         ],
         "defaultCode": 109,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 16,
         "order": 49,
@@ -474,8 +504,10 @@
           "pinterest"
         ],
         "defaultCode": 112,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 17,
         "order": 50,
@@ -499,8 +531,10 @@
           "rss"
         ],
         "defaultCode": 114,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 18,
         "order": 48,
@@ -524,8 +558,10 @@
           "search"
         ],
         "defaultCode": 115,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 19,
         "order": 52,
@@ -549,8 +585,10 @@
           "tumblr"
         ],
         "defaultCode": 116,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 20,
         "order": 53,
@@ -575,8 +613,10 @@
           "vimeo"
         ],
         "defaultCode": 118,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 21,
         "order": 54,
@@ -601,8 +641,10 @@
           "youtube"
         ],
         "defaultCode": 121,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 22,
         "order": 30,
@@ -627,8 +669,10 @@
           "cart"
         ],
         "defaultCode": 58880,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 23,
         "order": 31,
@@ -653,8 +697,10 @@
           "hamburger"
         ],
         "defaultCode": 58881,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 24,
         "order": 32,
@@ -678,8 +724,10 @@
           "grid-view"
         ],
         "defaultCode": 58883,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 26,
         "order": 33,
@@ -703,8 +751,10 @@
           "list-view"
         ],
         "defaultCode": 58884,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 27,
         "order": 34,
@@ -729,8 +779,10 @@
           "plus"
         ],
         "defaultCode": 58885,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 28,
         "order": 35,
@@ -755,8 +807,10 @@
           "minus"
         ],
         "defaultCode": 58882,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 25,
         "order": 36,
@@ -781,8 +835,10 @@
           "x"
         ],
         "defaultCode": 58886,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 29,
         "order": 37,
@@ -806,8 +862,10 @@
           "arrow-down"
         ],
         "defaultCode": 58887,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 30,
         "order": 38,
@@ -832,8 +890,10 @@
           "amazon_payments"
         ],
         "defaultCode": 59392,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 31,
         "order": 39,
@@ -858,8 +918,10 @@
           "google-plus"
         ],
         "defaultCode": 59648,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 32,
         "order": 40,
@@ -883,8 +945,10 @@
           "instagram"
         ],
         "defaultCode": 59649,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 33,
         "order": 41,
@@ -908,8 +972,10 @@
           "dogecoin"
         ],
         "defaultCode": 59652,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 34,
         "order": 42,
@@ -934,8 +1000,10 @@
           "dwolla"
         ],
         "defaultCode": 59653,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 35,
         "order": 43,
@@ -960,8 +1028,10 @@
           "forbrugsforeningen"
         ],
         "defaultCode": 59654,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 36,
         "order": 44,
@@ -985,8 +1055,10 @@
           "litecoin"
         ],
         "defaultCode": 59656,
-        "grid": 0
+        "grid": 0,
+        "attrs": []
       },
+      "attrs": [],
       "properties": {
         "id": 37,
         "order": 45,
@@ -1086,7 +1158,7 @@
       "showMetrics": false,
       "showMetadata": false,
       "showVersion": false,
-      "selector": "i"
+      "selector": ""
     },
     "imagePref": {
       "prefix": "icon-",
