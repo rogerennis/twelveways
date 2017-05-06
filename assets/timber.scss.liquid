@@ -1969,14 +1969,6 @@ label.error {
   }
 }
 
-.mobile-nav__search {
-  padding: $gutter / 2;
-
-  .search-bar {
-    margin-bottom: 0;
-  }
-}
-
 .mobile-nav__item {
   position: relative;
   display: block;
@@ -2001,9 +1993,27 @@ label.error {
   }
 }
 
+.mobile-nav__search {
+  padding: ($gutter / 2) ($gutter / 2) ($gutter + 10);
+
+  .search-bar {
+    margin-bottom: 0;
+  }
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: $gutter / 2;
+    right: $gutter / 2;
+    border-bottom: 0;
+  }
+}
+
 // Login/logout links can't have a class on them, so style <a> element
 .mobile-nav__item a {
   display: block;
+  text-transform: uppercase;
 }
 
 .mobile-nav__item a,
