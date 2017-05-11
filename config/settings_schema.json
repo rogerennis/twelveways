@@ -32,14 +32,14 @@
         "type": "color",
         "id": "color_primary",
         "label": "Primary",
-        "default": "#204a80",
+        "default": "#a9a592",
         "info": "Used for text links, and primary buttons"
       },
       {
         "type": "color",
         "id": "color_secondary",
         "label": "Secondary",
-        "default": "#dcdcdc",
+        "default": "#9296a9",
         "info": "Used for secondary buttons"
       },
       {
@@ -62,7 +62,7 @@
         "type": "color",
         "id": "color_body_text",
         "label": "Text",
-        "default": "#333333"
+        "default": "#434343"
       },
       {
         "type": "header",
@@ -72,19 +72,19 @@
         "type": "color",
         "id": "color_footer_bg",
         "label": "Background",
-        "default": "#f2f2f2"
+        "default": "#434343"
       },
       {
         "type": "color",
         "id": "color_footer_text",
         "label": "Text",
-        "default": "#636363"
+        "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "color_footer_social_link",
         "label": "Social media icons",
-        "default": "#bbbbbb"
+        "default": "#ffffff"
       }
     ]
   },

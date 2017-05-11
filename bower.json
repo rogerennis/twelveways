@@ -1,6 +1,6 @@
 {
-  "name": "timber",
-  "version": "2.2.2",
+  "name": "Twelveways(Timber)",
+  "version": "2017(2.2.2)",
   "keywords": [
     "shopify",
     "theme",
@@ -25,7 +25,8 @@
   ],
   "homepage": "https://github.com/Shopify/Timber",
   "authors": [
-    "Carson Shold <carson.shold@shopify.com>"
+    "Carson Shold <carson.shold@shopify.com>",
+    "Roger Ennis <rennermedia.online>"
   ],
   "description": "The Ultimate Shopify Theme Framework",
   "license": "MIT"

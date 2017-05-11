@@ -288,7 +288,11 @@ var ajaxCart = (function(module, $) {
     // Show empty cart
     if (cart.item_count === 0) {
       $cartContainer
-        .append('<p>' + {{ 'cart.general.empty' | t | json }} + '</p>');
+        .append('<p>' + {{ 'cart.general.empty' | t | json }} + '</p>')
+        .append('<a href="/collections/all" class="btn btn--full">' + {{ 'cart.general.empty_shop_btn' | t | json }} + '</a>' + '<br><br><br><br>')
+        .append('<p class="text-center">' + {{ 'cart.general.empty_or' | t | json }} + '</p>' + '<br><br>')
+        .append('<p>' + {{ 'cart.general.empty_get_inspired' | t | json }} + '</p>')
+        .append('<a href="/collections/all}" class="btn btn--full">' + {{ 'cart.general.empty_get_inspired_btn' | t | json }} + '</a>');
       cartCallback(cart);
       return;
     }
