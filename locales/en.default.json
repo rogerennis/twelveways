@@ -57,21 +57,22 @@
     "general": {
       "title": "Your Cart",
       "remove": "Remove",
-      "note": "Special instructions for seller",
-      "subtotal": "Subtotal",
+      "note": "Any special instructions for seller?",
+      "subtotal": "Subtotal:",
       "shipping_at_checkout": "Shipping & taxes calculated at checkout",
       "update": "Update Cart",
       "checkout": "Check Out",
       "empty": "Nothing here yet, lets try to,",
-      "empty_shop_btn": "SHOP",
-      "empty_or": "OR",
+      "empty_shop_btn": "Shop",
+      "empty_or": "or",
       "empty_get_inspired": "Take a look at how twelveways can fit your style.",
-      "empty_get_inspired_btn": "GET INSPIRED",
+      "empty_get_inspired_btn": "Get inspired",
       "continue_browsing_html": "Continue browsing <a href=\"/collections/all\">here</a>.",
       "close_cart": "Close Cart",
       "savings_html": "You're saving {{ price }}",
       "reduce_quantity": "Reduce item quantity by one",
-      "increase_quantity": "Increase item quantity by one"
+      "increase_quantity": "Increase item quantity by one",
+      "remove_item": "Remove item"
     },
     "label": {
       "product": "Product",
