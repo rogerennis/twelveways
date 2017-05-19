@@ -151,6 +151,7 @@ $zindexDrawer: 10;
 /*================ Typography ================*/
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700,800,900'); //Google Web font
+@import "variables"; // icomoon variables
 
 $headerFontStack: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $headerFontWeight: 800;
@@ -1690,9 +1691,9 @@ label.error {
   display: none;
 }
 
-.supports-fontface .icon:before {
+/*[class^="icon-"], [class*=" icon-"],*/ .supports-fontface .icon:before {
   display: inline;
-  font-family: $socialIconFontStack;
+  font-family: $socialIconFontStack !important;
   text-decoration: none;
   speak: none; // future fallback, limited in effect currently
   font-style: normal;
@@ -1833,7 +1834,6 @@ label.error {
 ==============================================================================*/
 .site-header-container {
   background-color: $colorPrimary;
-  padding: ($gutter ) 0;
   
   .site-header {
 //     padding: ($gutter / 2) 0;
@@ -1863,6 +1863,7 @@ label.error {
   
   .logo-font {
     color: #fff;
+    font-size: em(80px);
   }
 
   a,

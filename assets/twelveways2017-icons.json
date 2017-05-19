@@ -233,12 +233,12 @@
       "prevSize": 32
     },
     {
-      "order": 55,
+      "order": 58,
       "name": "logo-with-tagline",
       "prevSize": 32
     },
     {
-      "order": 56,
+      "order": 57,
       "name": "logo-alone",
       "prevSize": 32
     }
@@ -757,7 +757,9 @@
       "showMetrics": false,
       "showMetadata": false,
       "showVersion": false,
-      "selector": ""
+      "selector": "",
+      "cssVars": true,
+      "cssVarsFormat": "scss"
     },
     "imagePref": {
       "prefix": "icon-",
