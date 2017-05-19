@@ -1705,7 +1705,7 @@ label.error {
 }
 
 /*================ Icon mapping ================*/
-.icon-amazon_payments:before { content: "\e800"; }
+.icon-amazon-payments:before { content: "\e800"; }
 .icon-american_express:before { content: "\41"; }
 .icon-arrow-down:before { content: "\e607"; }
 .icon-bitcoin:before { content: "\42"; }
@@ -1719,16 +1719,18 @@ label.error {
 .icon-facebook:before { content: "\66"; }
 .icon-fancy:before { content: "\46"; }
 .icon-forbrugsforeningen:before { content: "\e906"; }
-.icon-google-plus:before { content: "\e900"; }
+.icon-google-plus:before { content: "\e901"; }
+.icon-right-arrow:before { content: "\e900"; }
+.icon-left-arrow:before { content: "\e903"; }
 .icon-grid-view:before { content: "\e603"; }
 .icon-hamburger:before { content: "\e601"; }
-.icon-instagram:before { content: "\e901"; }
+.icon-instagram:before { content: "\e902"; }
 .icon-interac:before { content: "\49"; }
 .icon-jcb:before { content: "\4a"; }
 .icon-list-view:before { content: "\e604"; }
 .icon-litecoin:before { content: "\e908"; }
 .icon-maestro:before { content: "\6d"; }
-.icon-master:before { content: "\4d"; }
+.icon-master_card:before { content: "\4d"; }
 .icon-minus:before { content: "\e602"; }
 .icon-paypal:before { content: "\50"; }
 .icon-pinterest:before { content: "\70"; }
@@ -1742,6 +1744,8 @@ label.error {
 .icon-visa:before { content: "\56"; }
 .icon-x:before { content: "\e606"; }
 .icon-youtube:before { content: "\79"; }
+.icon-logo-with-tagline:before { content: "\e907"; }
+.icon-logo-alone:before { content: "\e909"; }
 
 .payment-icons {
   @include user-select(none);
@@ -1780,9 +1784,26 @@ label.error {
     color: {{ settings.color_footer_social_link }};
 
     &:hover {
-      color: darken({{ settings.color_footer_social_link }}, 10%);
+      color: $colorPrimary;
     }
   }
+}
+
+.footer-text-links {
+  list-style: none;
+  margin: 0 0 ($gutter) 0;
+  
+  li a {
+    color: #fff;
+    
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.made-in-canada-container {
+  margin-top: $gutter;
 }
 
 /*============================================================================
@@ -1810,18 +1831,23 @@ label.error {
 /*============================================================================
   #Site Header
 ==============================================================================*/
-.site-header {
-  padding: ($gutter / 2) 0;
-
-  .grid--table {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-
-    > .grid__item {
-      float: none;
-      display: table-cell;
-      vertical-align: middle;
+.site-header-container {
+  background-color: $colorPrimary;
+  padding: ($gutter ) 0;
+  
+  .site-header {
+//     padding: ($gutter / 2) 0;
+  
+    .grid--table {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+  
+      > .grid__item {
+        float: none;
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
   }
 }
@@ -1833,6 +1859,10 @@ label.error {
 
   @include at-query ($min, $large) {
     text-align: left;
+  }
+  
+  .logo-font {
+    color: #fff;
   }
 
   a,

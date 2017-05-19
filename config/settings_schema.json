@@ -229,6 +229,18 @@
         "id": "social_facebook_link",
         "label": "Facebook URL",
         "info": "https://www.facebook.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_link",
+        "label": "Pinterest URL",
+        "info": "https://www.pinterest.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram URL",
+        "info": "https://www.instagram.com/shopify"
       }
     ]
   }

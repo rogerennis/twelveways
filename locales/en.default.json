@@ -263,9 +263,12 @@
       "create_account": "Create account"
     },
     "footer": {
+      "navigation_title": "Quick Links",
+      "customer_title": "Customer Care",
       "social_title": "Get Connected",
+      "accepted_payments": "Accepted Payments",
       "newsletter_title": "Newsletter",
-      "accepted_payments": "Accepted Payments"
+      "proudly_made_by": "Twelveways is proudly made in Canada."
     }
   },
   "products": {
