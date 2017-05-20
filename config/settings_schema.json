@@ -61,37 +61,37 @@
       {
         "type": "color",
         "id": "color_body_text",
-        "label": "Text",
+        "label": "Twelveways black",
         "default": "#434343"
       },
       {
         "type": "color",
         "id": "color_text_black_2",
-        "label": "Text",
+        "label": "Twelveways Black 2",
         "default": "#5B5B5B"
       },
       {
         "type": "color",
         "id": "color_text_black_3",
-        "label": "Text",
+        "label": "Twelveways Black 3",
         "default": "#727272"
       },
       {
         "type": "color",
         "id": "color_text_black_4",
-        "label": "Text",
+        "label": "Twelveways Black 4",
         "default": "#8a8a8a"
       },
       {
         "type": "color",
         "id": "color_text_black_5",
-        "label": "Text",
+        "label": "Twelveways Black 5",
         "default": "#a1a1a1"
       },
       {
         "type": "color",
         "id": "color_text_black_6",
-        "label": "Text",
+        "label": "Twelveways Black 6",
         "default": "#9B9B9B"
       },
       {
@@ -241,6 +241,162 @@
         "id": "social_instagram_link",
         "label": "Instagram URL",
         "info": "https://www.instagram.com/shopify"
+      }
+    ]
+  },
+  {
+    "name": "Hero image slider",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Flexslider: Hero image slider"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_enable",
+        "label": "Turn image slider on"
+      },
+      {
+        "type": "select",
+        "id": "slider_animation",
+        "label": "Animation Type",
+        "options": [
+          {
+            "value": "slide",
+            "label": "Slide"
+          },
+          {
+            "value": "fade",
+            "label": "Fade"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "animation_loop",
+        "label": "Give the slider a seamless infinite loop"
+      },
+      {
+        "type": "header",
+        "content": "Add first image"
+      },
+      {
+        "type": "checkbox",
+        "id": "first_image_active",
+        "label": "Show first image"
+      },
+      {
+        "type": "image",
+        "id": "slide_1_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 320,
+        "max-height": 340,
+        "info": "320 x 340px .jpg hi-res required"
+      },
+      {
+        "type": "image",
+        "id": "slide_1_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 768,
+        "max-height": 440,
+        "info": "768 x 440px .jpg hi-res required"
+      },
+      {
+        "type": "image",
+        "id": "slide_1_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 1550,
+        "max-height": 540,
+        "info": "1550 x 540px .jpg hi-res required"
+      },
+/*
+      {
+        "type": "text",
+        "id": "first_image_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+*/
+      {
+        "type": "text",
+        "id": "first_link",
+        "label": "Link your image to a page"
+      },
+      {
+        "type": "header",
+        "content": "Add second image"
+      },
+      {
+        "type": "checkbox",
+        "id": "second_image_active",
+        "label": "Show second image"
+      },
+      {
+        "type": "image",
+        "id": "slide_2.jpg",
+        "label": "Upload phone image",
+        "max-width": 320,
+        "max-height": 340,
+        "info": "320 x 340px .jpg hi-res required"
+      },
+      {
+        "type": "image",
+        "id": "slide_2_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 768,
+        "max-height": 440,
+        "info": "768 x 440px .jpg hi-res required"
+      },
+      {
+        "type": "image",
+        "id": "slide_2_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 1550,
+        "max-height": 540,
+        "info": "1550 x 540px .jpg hi-res required"
+      },
+      {
+        "type": "text",
+        "id": "second_link",
+        "label": "Link your image to something"
+      },
+      {
+        "type": "header",
+        "content": "Add third image"
+      },
+      {
+        "type": "checkbox",
+        "id": "third_image_active",
+        "label": "Show third image"
+      },
+      {
+        "type": "image",
+        "id": "slide_3.jpg",
+        "label": "Upload phone image",
+        "max-width": 320,
+        "max-height": 340,
+        "info": "320 x 340px .jpg hi-res required"
+      },
+      {
+        "type": "image",
+        "id": "slide_3_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 768,
+        "max-height": 440,
+        "info": "768 x 440px .jpg hi-res required"
+      },
+      {
+        "type": "image",
+        "id": "slide_3_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 1550,
+        "max-height": 540,
+        "info": "1550 x 540px .jpg hi-res required"
+      },
+      {
+        "type": "text",
+        "id": "third_link",
+        "label": "Link your image to something"
       }
     ]
   }

@@ -29,6 +29,9 @@
 
   <!-- CSS ================================================== -->
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
+<!--   {{ 'flexslider.scss.css' | asset_url | stylesheet_tag }} -->
+  {{ 'flexslider-use.css' | asset_url | stylesheet_tag }}
+  {{ 'flexslider-inspired.css' | asset_url | stylesheet_tag }}
   
   <!-- Google Web Font ========================================== -->
   
@@ -208,7 +211,7 @@
                 <a href="/cart" class="js-drawer-open-right site-nav__link" aria-controls="CartDrawer" aria-expanded="false">
                   <span class="icon-fallback-text">
                     <span class="icon icon-cart" aria-hidden="true"></span>
-                    <span> ({{ cart.item_count }})</span>
+                    <span> &#40;{{ cart.item_count }}&#41;</span>
                     <span class="fallback-text">{{ 'layout.cart.title' | t }}</span>
                   </span>
                 </a>
@@ -366,7 +369,11 @@
         </div>
       </div>
     </nav>
-
+    
+    {% if template.name == 'index' %}
+      {% include 'hero-image-slider' %}
+    {% endif %}
+    
     <main class="wrapper main-content" role="main">
 
       {{ content_for_layout }}
@@ -510,7 +517,42 @@
 
   {{ 'fastclick.min.js' | asset_url | script_tag }}
   {{ 'timber.js' | asset_url | script_tag }}
-
+  
+  
+   {% comment %}
+    <!-- Flex Slider ================================================== -->
+  {% endcomment %}
+  <script type="text/javascript">
+  $(document).ready(function() {
+    
+    $('.flexslider').flexslider({
+      animation: "{{ settings.slider_animation }}",
+      animationLoop: false,
+      keyboard: true,
+      pausePlay: true
+    });
+    
+    $('.flexslider2').flexslider({
+      animation: "slide",
+      animationLoop: false,
+      keyboard: true,
+      pausePlay: true,
+      namespace: "use-"
+    });
+    
+    $('.flexslider3').flexslider({
+      animation: "slide",
+      animationLoop: false,
+      keyboard: true,
+      pausePlay: true,
+      namespace: "inspired-"
+    });
+  });
+  </script>
+  {{ 'jquery.flexslider-min.js' | asset_url | script_tag }}
+  
+  
+  
   {% comment %}
     Template-specific js
   {% endcomment %}
