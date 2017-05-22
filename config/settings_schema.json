@@ -291,7 +291,7 @@
         "label": "Upload phone image",
         "max-width": 320,
         "max-height": 340,
-        "info": "320 x 340px .jpg hi-res required"
+        "info": "320 x 340px .jpg hi-res at 2x required"
       },
       {
         "type": "image",
@@ -299,7 +299,7 @@
         "label": "Upload tablet image",
         "max-width": 768,
         "max-height": 440,
-        "info": "768 x 440px .jpg hi-res required"
+        "info": "768 x 440px .jpg hi-res at 2x required"
       },
       {
         "type": "image",
@@ -307,7 +307,7 @@
         "label": "Upload desktop image",
         "max-width": 1550,
         "max-height": 540,
-        "info": "1550 x 540px .jpg hi-res required"
+        "info": "1550 x 540px .jpg hi-res at 2x required"
       },
 /*
       {
@@ -337,7 +337,7 @@
         "label": "Upload phone image",
         "max-width": 320,
         "max-height": 340,
-        "info": "320 x 340px .jpg hi-res required"
+        "info": "320 x 340px .jpg hi-res at 2x required"
       },
       {
         "type": "image",
@@ -345,7 +345,7 @@
         "label": "Upload tablet image",
         "max-width": 768,
         "max-height": 440,
-        "info": "768 x 440px .jpg hi-res required"
+        "info": "768 x 440px .jpg hi-res at 2x required"
       },
       {
         "type": "image",
@@ -353,7 +353,7 @@
         "label": "Upload desktop image",
         "max-width": 1550,
         "max-height": 540,
-        "info": "1550 x 540px .jpg hi-res required"
+        "info": "1550 x 540px .jpg hi-res at 2x required"
       },
       {
         "type": "text",
@@ -375,7 +375,7 @@
         "label": "Upload phone image",
         "max-width": 320,
         "max-height": 340,
-        "info": "320 x 340px .jpg hi-res required"
+        "info": "320px x 340px .jpg hi-res at 2x required"
       },
       {
         "type": "image",
@@ -383,7 +383,7 @@
         "label": "Upload tablet image",
         "max-width": 768,
         "max-height": 440,
-        "info": "768 x 440px .jpg hi-res required"
+        "info": "768px x 440px .jpg hi-res at 2x required"
       },
       {
         "type": "image",
@@ -391,12 +391,45 @@
         "label": "Upload desktop image",
         "max-width": 1550,
         "max-height": 540,
-        "info": "1550 x 540px .jpg hi-res required"
+        "info": "1550px x 540px .jpg hi-res at 2x required"
       },
       {
         "type": "text",
         "id": "third_link",
         "label": "Link your image to something"
+      }
+    ]
+  },
+  {
+    "name": "Twelve styles image",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Twelve styles image"
+      },
+      {
+        "type": "image",
+        "id": "twelve_styles_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 480,
+        "max-height": 120,
+        "info": "320px x 120px .jpg hi-res at 2x required"
+      },
+      {
+        "type": "image",
+        "id": "twelve_styles_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 768,
+        "max-height": 287,
+        "info": "768px x 287px .jpg hi-res at 2x required"
+      },
+      {
+        "type": "image",
+        "id": "twelve_styles_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 1550,
+        "max-height": 327,
+        "info": "1550px x 327px .jpg hi-res at 2x required"
       }
     ]
   }
