@@ -150,7 +150,6 @@ $zindexDrawer: 10;
 
 /*================ Typography ================*/
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700,800,900'); //Google Web font
 @import "variables"; // icomoon variables
 
 $headerFontStack: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1790,23 +1789,6 @@ label.error {
   }
 }
 
-.footer-text-links {
-  list-style: none;
-  margin: 0 0 ($gutter) 0;
-  
-  li a {
-    color: #fff;
-    
-    &:hover {
-      color: $colorPrimary;
-    }
-  }
-}
-
-.made-in-canada-container {
-  margin-top: $gutter;
-}
-
 /*============================================================================
   #Pagination
 ==============================================================================*/
@@ -2277,6 +2259,31 @@ label.error {
 }
 
 /*============================================================================
+  #Site Homepage
+==============================================================================*/
+.rtbs {
+  margin-bottom: $gutter * 1.5;
+  
+  p {
+    font-size: em(20px);
+  }
+  
+  .rtb-separators {
+    border-bottom: 2px solid $colorBorder;
+    width: 30%;
+    margin: ($gutter) auto;
+  }
+}
+
+.rtbs-made {
+  margin-bottom: $gutter * 2;
+  
+  small {
+    color: $colorTextBlackSix;
+  }
+}
+
+/*============================================================================
   #Site Footer
 ==============================================================================*/
 .site-footer {
@@ -2287,6 +2294,23 @@ label.error {
   @include at-query ($min, $large) {
     padding: ($gutter * 2) 0;
   }
+}
+
+.footer-text-links {
+  list-style: none;
+  margin: 0 0 ($gutter) 0;
+  
+  li a {
+    color: #fff;
+    
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.made-in-canada-container {
+  margin-top: $gutter;
 }
 
 /*============================================================================
@@ -2881,7 +2905,7 @@ html[xmlns] .slides {display: block;}
   /* Pause/Play */
   .flex-pauseplay {
     a { 
-      display: block; width: 17px; height: 22px; position: absolute; bottom: 10px; left: 32%; opacity: 0.8; z-index: 10; overflow: hidden; cursor: pointer; color: $colorBody; 
+      display: block; width: 17px; height: 22px; position: absolute; bottom: 10px; left: 32%; opacity: 1; z-index: 10; overflow: hidden; cursor: pointer; color: $colorBody; 
       
       &:before {
         font-family: "flexslider-icon"; font-size: 20px; display: inline-block; content: '\f004';
