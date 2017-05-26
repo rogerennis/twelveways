@@ -41,16 +41,15 @@
 {% comment %}
 featured  -  Changeable image (12 styles of twelveways)
 {% endcomment %}
-<section class="grid-uniform">
-  <div class="grid__item">
-    <div class="grid__image">
-      <img class="small-show medium-show large-hide" src="{{ 'twelve_styles_phone.jpg' | asset_url }}">
-      <img class="small-hide medium-hide" src="{{ 'twelve_styles_tablet.jpg' | asset_url }}">
-      <img class="large-show medium-down--hide" src="{{ 'twelve_styles_desktop.jpg' | asset_url }}">
-    </div>
-  </div>
-</section>
+{% if settings.twelve_styles_enable %}
 
+  <section class="grid-uniform">
+    <div class="grid__item">
+      <div class="twelve-styles-image" title="{{ settings.twelve_styles_image_title | escape }}"></div>
+    </div>
+  </section>
+
+{% endif %}
 
 
 <h2>{{ 'homepage.sections.frontpage_title' | t }}</h2>

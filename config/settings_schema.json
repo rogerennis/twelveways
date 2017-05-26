@@ -121,6 +121,7 @@
   {
     "name": "Header",
     "settings": [
+/*
       {
         "type": "header",
         "content": "Logo"
@@ -145,6 +146,7 @@
         "default": "450",
         "info": "Defined in pixels. Do not add the 'px' unit."
       },
+*/
       {
         "type": "header",
         "content": "Favicon"
@@ -245,7 +247,7 @@
     ]
   },
   {
-    "name": "Hero image slider",
+    "name": "Hero image slider (homepage)",
     "settings": [
       {
         "type": "header",
@@ -289,34 +291,32 @@
         "type": "image",
         "id": "slide_1_phone.jpg",
         "label": "Upload phone image",
-        "max-width": 320,
+        "max-width": 828,
         "max-height": 340,
-        "info": "320 x 340px .jpg hi-res at 2x required"
+        "info": "828px x 340px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slide_1_tablet.jpg",
         "label": "Upload tablet image",
-        "max-width": 768,
+        "max-width": 1536,
         "max-height": 440,
-        "info": "768 x 440px .jpg hi-res at 2x required"
+        "info": "1536px x 440px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slide_1_desktop.jpg",
         "label": "Upload desktop image",
-        "max-width": 1550,
+        "max-width": 3100,
         "max-height": 540,
-        "info": "1550 x 540px .jpg hi-res at 2x required"
+        "info": "3100px x 540px .jpg hi-res at 72dpi required"
       },
-/*
       {
         "type": "text",
-        "id": "first_image_alt",
+        "id": "first_image_title",
         "label": "BRIEFLY, Describe your image",
         "info": "5 women wearing twelveways on vacation"
       },
-*/
       {
         "type": "text",
         "id": "first_link",
@@ -335,25 +335,31 @@
         "type": "image",
         "id": "slide_2.jpg",
         "label": "Upload phone image",
-        "max-width": 320,
+        "max-width": 828,
         "max-height": 340,
-        "info": "320 x 340px .jpg hi-res at 2x required"
+        "info": "828px x 340px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slide_2_tablet.jpg",
         "label": "Upload tablet image",
-        "max-width": 768,
+        "max-width": 1536,
         "max-height": 440,
-        "info": "768 x 440px .jpg hi-res at 2x required"
+        "info": "1536px x 440px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slide_2_desktop.jpg",
         "label": "Upload desktop image",
-        "max-width": 1550,
+        "max-width": 3100,
         "max-height": 540,
-        "info": "1550 x 540px .jpg hi-res at 2x required"
+        "info": "3100px x 540px .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "second_image_title",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
       },
       {
         "type": "text",
@@ -373,25 +379,31 @@
         "type": "image",
         "id": "slide_3.jpg",
         "label": "Upload phone image",
-        "max-width": 320,
+        "max-width": 828,
         "max-height": 340,
-        "info": "320px x 340px .jpg hi-res at 2x required"
+        "info": "640px x 680px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slide_3_tablet.jpg",
         "label": "Upload tablet image",
-        "max-width": 768,
+        "max-width": 1536,
         "max-height": 440,
-        "info": "768px x 440px .jpg hi-res at 2x required"
+        "info": "1536px x 440px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slide_3_desktop.jpg",
         "label": "Upload desktop image",
-        "max-width": 1550,
+        "max-width": 3100,
         "max-height": 540,
-        "info": "1550px x 540px .jpg hi-res at 2x required"
+        "info": "3100px x 540px .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "third_image_title",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
       },
       {
         "type": "text",
@@ -401,35 +413,46 @@
     ]
   },
   {
-    "name": "Twelve styles image",
+    "name": "Twelve styles image (homepage)",
     "settings": [
       {
         "type": "header",
         "content": "Twelve styles image"
       },
       {
+        "type": "checkbox",
+        "id": "twelve_styles_enable",
+        "label": "Turn twelve styles image on"
+      },
+      {
         "type": "image",
         "id": "twelve_styles_phone.jpg",
         "label": "Upload phone image",
-        "max-width": 480,
-        "max-height": 120,
-        "info": "320px x 120px .jpg hi-res at 2x required"
+        "max-width": 770,
+        "max-height": 250,
+        "info": "770px x 250px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "twelve_styles_tablet.jpg",
         "label": "Upload tablet image",
-        "max-width": 768,
-        "max-height": 287,
-        "info": "768px x 287px .jpg hi-res at 2x required"
+        "max-width": 1540,
+        "max-height": 460,
+        "info": "1540px x 440px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "twelve_styles_desktop.jpg",
         "label": "Upload desktop image",
-        "max-width": 1550,
-        "max-height": 327,
-        "info": "1550px x 327px .jpg hi-res at 2x required"
+        "max-width": 2240,
+        "max-height": 720,
+        "info": "2240px x 720px .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "twelve_styles_image_title",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
       }
     ]
   }

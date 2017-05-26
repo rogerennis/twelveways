@@ -14,17 +14,17 @@
     <ul class="slides">
     {% if settings.first_image_active %}  
       <li>
-        <a href="{{ settings.first_link }}"><div class="flex-first-image"></div></a>
+        <a href="{{ settings.first_link }}"><div class="flex-first-image" title="{{ settings.first_image_title | escape }}"></div></a>
       </li>
     {% endif %}  
     {% if settings.second_image_active %}  
       <li>
-        <a href="{{ settings.second_link }}"><div class="flex-second-image"></div></a>
+        <a href="{{ settings.second_link }}"><div class="flex-second-image" title="{{ settings.second_image_title | escape }}"></div></a>
       </li>
     {% endif %}
     {% if settings.third_image_active %}  
       <li>
-        <a href="{{ settings.third_link }}"><div class="flex-third-image"></div></a>
+        <a href="{{ settings.third_link }}"><div class="flex-third-image" title="{{ settings.third_image_title | escape }}"></div></a>
       </li>
     {% endif %}
     </ul>

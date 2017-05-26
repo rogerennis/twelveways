@@ -2283,6 +2283,24 @@ label.error {
   }
 }
 
+.twelve-styles-image {
+  background: url('{{ "twelve_styles_phone.jpg" | asset_url }}') no-repeat 0 0;
+  min-height: 200px;
+  background-size: contain;
+  
+  @include at-query ($min, $medium) {
+    background: url('{{ "twelve_styles_tablet.jpg" | asset_url }}') no-repeat 0 0;
+    height: 320px;
+    background-size: contain;
+  }
+  
+  @include at-query ($min, $large + 225) {
+    background: url('{{ "twelve_styles_desktop.jpg" | asset_url }}') no-repeat 0 0;
+    height: 450px;
+    background-size: contain;
+  }
+}
+
 /*============================================================================
   #Site Footer
 ==============================================================================*/
@@ -2797,21 +2815,57 @@ html[xmlns] .slides {display: block;}
         width: 100%;
         background: url('{{ "slider_1_phone.jpg" | asset_url }}') no-repeat 0 0;
         height: 340px;
-        background-size: cover;
+        background-size: contain;
+        
+        @include at-query($min, $medium) {
+          background: url('{{ "slider_1_tablet.jpg" | asset_url }}') no-repeat 0 0;
+          height: 440px;
+          background-size: contain;
+        }
+        
+        @include at-query($min, $large + 225) {
+          background: url('{{ "slider_1_desktop.jpg" | asset_url }}') no-repeat 0 0;
+          height: 540px;
+          background-size: contain;
+        }
       }
       
       .flex-second-image {
         width: 100%;
         background: url('{{ "slider_2_phone.jpg" | asset_url }}') no-repeat 0 0;
         height: 340px;
-        background-size: cover;
+        background-size: contain;
+        
+        @include at-query($min, $medium) {
+          background: url('{{ "slider_2_tablet.jpg" | asset_url }}') no-repeat 0 0;
+          height: 440px;
+          background-size: contain;
+        }
+        
+        @include at-query($min, $large + 225) {
+          background: url('{{ "slider_2_desktop.jpg" | asset_url }}') no-repeat 0 0;
+          height: 540px;
+          background-size: contain;
+        }
       }
       
       .flex-third-image {
         width: 100%;
         background: url('{{ "slider_3_phone.jpg" | asset_url }}') no-repeat 0 0;
         height: 340px;
-        background-size: cover;
+        background-size: contain;
+        
+        @include at-query($min, $medium) {
+          background: url('{{ "slider_3_tablet.jpg" | asset_url }}') no-repeat 0 0;
+          height: 440px;
+          background-size: contain;
+        }
+        
+        @include at-query($min, $large + 225) {
+          background: url('{{ "slider_3_desktop.jpg" | asset_url }}') no-repeat 0 0;
+          height: 540px;
+          background-size: contain;
+        }
       }
     }
     
@@ -2905,7 +2959,15 @@ html[xmlns] .slides {display: block;}
   /* Pause/Play */
   .flex-pauseplay {
     a { 
-      display: block; width: 17px; height: 22px; position: absolute; bottom: 10px; left: 32%; opacity: 1; z-index: 10; overflow: hidden; cursor: pointer; color: $colorBody; 
+      display: block; width: 17px; height: 22px; position: absolute; bottom: 10px; left: 32%; opacity: 1; z-index: 10; overflow: hidden; cursor: pointer; color: $colorBody;
+      
+      @include at-query($min, $medium) {
+        left: 41%;
+      }
+      
+      @include at-query($min, $large + 225) {
+        left: 43%; 
+      }
       
       &:before {
         font-family: "flexslider-icon"; font-size: 20px; display: inline-block; content: '\f004';
@@ -2930,81 +2992,7 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
 
 
-/*============================================================================
-  #MEDIA QUERY USAGE
-==============================================================================*/
 
-@include at-query($min, $medium) {
-  .flexslider {
-    .slides {
-      & > li {        
-        .flex-first-image {
-          width: 100%;
-          background: url('{{ "slider_1_tablet.jpg" | asset_url }}') no-repeat 0 0;
-          height: 440px;
-          background-size: cover;
-        }
-        
-        .flex-second-image {
-          width: 100%;
-          background: url('{{ "slider_2_tablet.jpg" | asset_url }}') no-repeat 0 0;
-          height: 440px;
-          background-size: cover;
-        }
-        
-        .flex-third-image {
-          width: 100%;
-          background: url('{{ "slider_3_tablet.jpg" | asset_url }}') no-repeat 0 0;
-          height: 440px;
-          background-size: cover;
-        }
-      }
-    }
-    
-    /* Pause/Play */
-    .flex-pauseplay {
-      a { 
-        left: 41%; 
-      }
-    }
-  }
-}
-
-@include at-query($min, $large + 225) {
-  .flexslider {
-    .slides {
-      & > li {        
-        .flex-first-image {
-          width: 100%;
-          background: url('{{ "slider_1_desktop.jpg" | asset_url }}') no-repeat 0 0;
-          height: 540px;
-          background-size: cover;
-        }
-        
-        .flex-second-image {
-          width: 100%;
-          background: url('{{ "slider_2_desktop.jpg" | asset_url }}') no-repeat 0 0;
-          height: 540px;
-          background-size: cover;
-        }
-        
-        .flex-third-image {
-          width: 100%;
-          background: url('{{ "slider_3_desktop.jpg" | asset_url }}') no-repeat 0 0;
-          height: 540px;
-          background-size: cover;
-        }
-      }
-    }
-    
-    /* Pause/Play */
-    .flex-pauseplay {
-      a { 
-        left: 43%; 
-      }
-    }
-  }
-}
 
 /*
 @media screen and (max-width: 860px) {
