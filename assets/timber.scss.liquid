@@ -153,7 +153,7 @@ $zindexDrawer: 10;
 @import "variables"; // icomoon variables
 
 $headerFontStack: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$headerFontWeight: 800;
+$headerFontWeight: 700;
 
 $bodyFontStack: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $baseFontSize: 16px; // Henceforth known as 1em
@@ -792,9 +792,17 @@ body {
   line-height: 1.3;
   font-family: $bodyFontStack;
   color: $colorPrimaryBlack;
-  font-weight: 500;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  
+  @include at-query ($min, $medium) {
+    font-size: 120%;
+  }
+  
+  @include at-query ($min, $large) {
+    font-size: 130%;
+  }
 }
 
 .text-upper {
@@ -2264,8 +2272,9 @@ label.error {
 .rtbs {
   margin-bottom: $gutter * 1.5;
   
-  p {
-    font-size: em(20px);
+  h3 {
+    font-size: em(22px);
+    font-weight: 400;
   }
   
   .rtb-separators {
@@ -2276,28 +2285,87 @@ label.error {
 }
 
 .rtbs-made {
-  margin-bottom: $gutter * 2;
+  margin-bottom: $gutter * 2.55;
   
   small {
     color: $colorTextBlackSix;
+    font-weight: 500;
   }
 }
 
 .twelve-styles-image {
   background: url('{{ "twelve_styles_phone.jpg" | asset_url }}') no-repeat 0 0;
-  min-height: 200px;
-  background-size: contain;
+  height: 20vh;
+  background-size: 100%;
   
   @include at-query ($min, $medium) {
     background: url('{{ "twelve_styles_tablet.jpg" | asset_url }}') no-repeat 0 0;
-    height: 320px;
-    background-size: contain;
+    height: 25vh;
+    background-size: 100%;
   }
   
-  @include at-query ($min, $large + 225) {
+  @include at-query ($min, $large) {
     background: url('{{ "twelve_styles_desktop.jpg" | asset_url }}') no-repeat 0 0;
-    height: 450px;
-    background-size: contain;
+    height: 32vh;
+    background-size: 100%;
+  }
+}
+
+.get-inspired-container {
+  margin-bottom: $gutter;
+  
+  .get-inspired-section {    
+    .get-inspired-section--message {
+      background-color: {{ settings.get_inspired_color }};
+      padding: $gutter + 10;
+      
+      @include at-query ($min, $medium) {
+        padding: ($gutter * 2.5) ($gutter * 7) ($gutter * 3) ($gutter + 40);
+      }
+      
+      @include at-query ($min, $large) {
+        padding: ($gutter * 1.8) ($gutter * 7) ($gutter * 1.8 + 3) ($gutter + 40);
+      }
+      
+       @include at-query ($min, $large + 255) {
+        padding: ($gutter * 2.5) ($gutter * 2) ($gutter * 2.2) ($gutter + 15);
+      }
+      
+      h2 {
+        color: $colorNavText;
+      }
+      
+      a {
+        color: $colorNavText;
+        text-decoration: underline;
+        
+        &:hover {
+          text-decoration: none;
+          color: $colorLinkHover;
+        }
+      }
+    }
+    
+    .get-inspired-section--image {
+      background: url('{{ "get_inspired_section_phone.jpg" | asset_url }}');
+      background-repeat:no-repeat;
+      height: 35vh;
+      background-size: 100%;
+      
+      @include at-query ($min, $medium) {
+        background: url('{{ "get_inspired_section_tablet.jpg" | asset_url }}');
+        background-repeat:no-repeat;
+        height: 40vh;
+        background-size: 100%;
+      }
+      
+      @include at-query ($min, $large) {
+        background: url('{{ "get_inspired_section_desktop.jpg" | asset_url }}');
+        background-repeat:no-repeat;
+        height: 35vh;
+        background-size: 100%;
+      }
+    }
   }
 }
 
@@ -2823,7 +2891,7 @@ html[xmlns] .slides {display: block;}
           background-size: contain;
         }
         
-        @include at-query($min, $large + 225) {
+        @include at-query($min, $large) {
           background: url('{{ "slider_1_desktop.jpg" | asset_url }}') no-repeat 0 0;
           height: 540px;
           background-size: contain;
@@ -2842,7 +2910,7 @@ html[xmlns] .slides {display: block;}
           background-size: contain;
         }
         
-        @include at-query($min, $large + 225) {
+        @include at-query($min, $large) {
           background: url('{{ "slider_2_desktop.jpg" | asset_url }}') no-repeat 0 0;
           height: 540px;
           background-size: contain;
@@ -2861,7 +2929,7 @@ html[xmlns] .slides {display: block;}
           background-size: contain;
         }
         
-        @include at-query($min, $large + 225) {
+        @include at-query($min, $large) {
           background: url('{{ "slider_3_desktop.jpg" | asset_url }}') no-repeat 0 0;
           height: 540px;
           background-size: contain;
@@ -2892,8 +2960,8 @@ html[xmlns] .slides {display: block;}
     }
   
     &.flex-control-paging li a { 
-      width: 15px;
-      height: 15px;
+      width: $gutter / 2;
+      height: $gutter / 2;
       display: block;
       background: $colorBorder;
       cursor: pointer;
@@ -2921,8 +2989,8 @@ html[xmlns] .slides {display: block;}
     a {
       text-decoration:none;
       display: block;
-      width: 30px;
-      height: 30px;
+      width: $gutter;
+      height: $gutter;
       margin: -20px 0 0;
       position: absolute;
       top: 50%;
@@ -2939,7 +3007,7 @@ html[xmlns] .slides {display: block;}
     
       &:before {
         font-family: "twelveways2017-icons";
-        font-size: 30px;
+        font-size: em(30px);
         line-height: 1;
         display: inline-block;
         content: '\e903';
@@ -2965,7 +3033,7 @@ html[xmlns] .slides {display: block;}
         left: 41%;
       }
       
-      @include at-query($min, $large + 225) {
+      @include at-query($min, $large) {
         left: 43%; 
       }
       

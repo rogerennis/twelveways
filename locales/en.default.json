@@ -226,14 +226,18 @@
   },
   "homepage": {
     "sections": {
-      "rtb_one": "12 versatile styles for any occasion.",
-      "rtb_two": "No compromising your style.",
-      "rtb_three": "The perfect travel partner.",
-      "rtb_four": "Reduces your amount of packing.",
+      "rtb_one": "12 versatile styles for any occasion",
+      "rtb_two": "No compromising your style",
+      "rtb_three": "The perfect travel partner",
+      "rtb_four": "Reduces your amount of packing",
       "proudly_made_by": "Twelveways is proudly made in Canada.",
       "frontpage_title": "Frontpage Collection",
       "featured_title": "Featured Collections",
-      "news_title": "Latest News"
+      "news_title": "Latest News",
+      "get-inspired": {
+        "title": "Get Inspired with all new seasonal looks!",
+        "cta": "Try to mix and match styles"
+      }
     },
     "onboarding": {
       "modal_title": "Almost there...",
