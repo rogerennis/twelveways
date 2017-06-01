@@ -74,4 +74,25 @@
 {% endif %}
 
 
+{% comment %}A Weekend with Twelveways{% endcomment %}
 
+{% if settings.get_inspired_enable %}
+
+<section class="grid">
+  
+  <div class="grid__item large--one-half">
+    <div class="video-weekend-section">
+      <h2>{{ 'homepage.sections.video-weekend.title' | t }}</h2>
+      <p>{{ 'homepage.sections.video-weekend.copy' | t }}</p>
+      <iframe width="533" height="265" src="https://www.youtube-nocookie.com/embed/FZv5yLa2_Dk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+  </div>
+  
+  <div class="grid__item large--one-half">
+    <a href="{{ settings.get_inspired_link }}">
+      <div class="get-inspired-section--image" title="{{ settings.get_inspired_image_title | escape }}"></div>
+    </a>
+  </div>
+</section>
+
+{% endif %}
