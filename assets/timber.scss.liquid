@@ -2370,7 +2370,19 @@ label.error {
 }
 
 
-.video-weekend-section {
+.weekend-video-section {
+  margin-bottom: $gutter * 2;
+  
+  @include at-query ($min, $medium) {
+    margin-bottom: 0;
+  }
+  
+  p {
+    margin-bottom: $gutter;
+  }
+}
+
+.how-to-video-section {
   p {
     margin-bottom: $gutter;
   }

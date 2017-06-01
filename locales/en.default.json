@@ -238,9 +238,13 @@
         "title": "Get Inspired with all new seasonal looks!",
         "cta": "Try to mix and match styles"
       },
-      "video-weekend": {
+      "weekend-video": {
         "title": "A Weekend with Twelveways",
         "copy": "Enjoy light packing and maximize your styles, learn how"
+      },
+      "how-to-video": {
+        "title": "How to Use your Twelveways",
+        "copy": "Quick instructions on how to achieve All 12 Style"
       }
     },
     "onboarding": {
