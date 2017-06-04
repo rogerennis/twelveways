@@ -18,7 +18,7 @@
   Set the default grid_item_width if no variable is set
 {% endcomment %}
 {% unless grid_item_width %}
-  {% assign grid_item_width = 'large--one-third medium--one-half' %}
+  {% assign grid_item_width = 'large--one-half medium--one-half' %}
 {% endunless %}
 
 {% comment %}
@@ -37,7 +37,7 @@
   {% assign sold_out = false %}
 {% endif %}
 
-<div class="grid__item {{ grid_item_width }}">
+<div class="grid__item {{ grid_item_width }} complete-product">
 
   {% comment %}
     Link to your product with the 'within: collection' filter for the link to be aware of the collection.
@@ -55,37 +55,53 @@
     <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
   </a>
 
-  <p class="h6">
+  {% comment %}
+  <p class="h5">
     <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
   </p>
-  <p>
-    {% comment %}
-      You can show a leading 'from' or 'up to' by checking 'product.price_varies'
-      if your variants have different prices.
-    {% endcomment %}
-    {% if on_sale %}
-      {% if product.price_varies %}
-        {% assign sale_price = product.price | money %}
-        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-      {% else %}
-        <strong>{{ 'products.product.on_sale' | t }}</strong>
-        {{ product.price | money }}
-      {% endif %}
-    {% else %}
-      {% if product.price_varies %}
-        {% assign price = product.price | money %}
-        {{ 'products.general.from_text_html' | t: price: price }}
-      {% else %}
-        {{ product.price | money }}
-      {% endif %}
-    {% endif %}
-    {% if sold_out %}
-      <br><strong>{{ 'products.product.sold_out' | t }}</strong>
-    {% endif %}
-    {% if on_sale %}
-      <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-      <br><s>{{ product.compare_at_price | money }}</s>
+  {% endcomment %}
+  
+  <p class="in_stock">
+    {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+      {{ product.variants.first.inventory_quantity }} {{ 'products.product.in_stock' | t }}
     {% endif %}
   </p>
+  
+  <p class="product-title">{{ product.title }}</p>
+  {% if sold_out %}
+    <span class="sold-old">{{ 'products.product.sold_out' | t }}</span>
+  {% endif %}
+  
+  
+  {% if product.available == true %}
+    <p class="price">
+      {% comment %}
+        You can show a leading 'from' or 'up to' by checking 'product.price_varies'
+        if your variants have different prices.
+      {% endcomment %}
+      
+      {% if on_sale %}
+        {% if product.price_varies %}
+          {% assign sale_price = product.price | money %}
+          {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+        {% else %}
+          <span class="on-sale">{{ 'products.product.on_sale' | t }}</span>
+          {{ product.price | money }}
+        {% endif %}
+      {% else %}
+        {% if product.price_varies %}
+          {% assign price = product.price | money %}
+          {{ 'products.general.from_text_html' | t: price: price }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      {% endif %}
+      
+      {% if on_sale %}
+        <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+        <br><div class="old-price"><s>{{ product.compare_at_price | money }}</s></div>
+      {% endif %}
+    </p>
+  {% endif %}
 
 </div>

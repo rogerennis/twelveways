@@ -35,9 +35,13 @@
     {% else %}
       <header class="section-header">
         <h1 class="section-header__title section-header__left">{{ collection.title }}</h1>
+        {% comment %}
+        disable page sorting becuase there are only 4 products to sort through
+        
         <div class="section-header__right">
           {% include 'collection-sorting' %}
         </div>
+        {% endcomment %}
       </header>
     {% endif %}
 

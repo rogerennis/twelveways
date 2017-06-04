@@ -797,11 +797,11 @@ body {
   -webkit-text-size-adjust: 100%;
   
   @include at-query ($min, $medium) {
-    font-size: 120%;
+    font-size: 105%;
   }
   
   @include at-query ($min, $large) {
-    font-size: 130%;
+    font-size: 110%;
   }
 }
 
@@ -972,7 +972,7 @@ hr {
 
 /*================ Section Headers ================*/
 .section-header {
-  margin-bottom: $gutter / 1.5;
+  margin-bottom: $gutter + 10;
 }
 
 @include at-query ($min, $large) {
@@ -2431,6 +2431,45 @@ label.error {
   }
 }
 
+.complete-product {
+  margin-bottom: 20px;
+  
+  .in_stock {
+    color: $colorTextBlackFour;
+    margin-bottom: 0;
+  }
+  
+  .product-title {
+    font-size: em(20px);
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .sold-old {
+    background-color: darken($colorPrimary, 30%);
+    padding: 3px 7px;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 5px;
+  }
+  
+  .price {
+    color: $colorTextBlackFour;
+    
+    .on-sale {
+      background-color: $colorPrimary;
+      padding: 3px 7px;
+      color: #fff;
+      font-weight: 700;
+      margin-right: 5px;
+    }
+  }
+  
+  .old-price {
+    color: $colorTextBlackFour;
+  }
+}
+
 /*============================================================================
   #Collection Filters
 ==============================================================================*/
@@ -2443,16 +2482,24 @@ label.error {
 ==============================================================================*/
 .breadcrumb {
   margin-bottom: $gutter;
-
+  
+  a {
+    color: $colorTextBlackSix;
+  }
+  
   a,
   span {
     display: inline-block;
-    padding: 0 7px 0 0;
+    padding: 0 2px 0 0;
     margin-right: 7px;
 
     &:first-child {
       padding-left: 0;
     }
+  }
+  
+  a:hover {
+    text-decoration: underline;
   }
 }
 

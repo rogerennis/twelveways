@@ -15,8 +15,8 @@
         {{ collection.title | link_to: url }}
       {% endif %}
     {% endif %}
-    <span aria-hidden="true">&rsaquo;</span>
-    <span>{{ product.title }}</span>
+    <span class="other-pages" aria-hidden="true">&rsaquo;</span>
+    <span class="other-pages">{{ product.title }}</span>
 
   {% elsif template contains 'collection' and collection.handle %}
 
