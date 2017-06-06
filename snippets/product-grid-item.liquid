@@ -61,11 +61,13 @@
   </p>
   {% endcomment %}
   
-  <p class="in_stock">
-    {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
-      {{ product.variants.first.inventory_quantity }} {{ 'products.product.in_stock' | t }}
-    {% endif %}
-  </p>
+  {% if product.variants.first.inventory_quantity < 10 %}
+    <p class="in_stock">
+      {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+        {{ product.variants.first.inventory_quantity }} {{ 'products.product.in_stock' | t }}
+      {% endif %}
+    </p>
+  {% endif %}
   
   <p class="product-title">{{ product.title }}</p>
   {% if sold_out %}
