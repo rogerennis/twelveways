@@ -1125,10 +1125,10 @@ html input[disabled] {
 .rte .btn {
   display: inline-block;
   padding: 8px 10px;
-  width: auto;
+  width: 100%;
   margin: 0;
   line-height: 1.42;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
@@ -1140,6 +1140,10 @@ html input[disabled] {
   -moz-appearance: none;
   border-radius: $radius;
   font-size: em(19px);
+  
+  @include at-query($min, $medium) {
+    width: auto;
+  }
   
   &.btn-search {
     
@@ -1416,7 +1420,7 @@ form {
 }
 
 .form-vertical {
-  margin-bottom: $gutter / 2;
+  margin-bottom: $gutter + 10;
 }
 
 /*================ Prevent zoom on touch devices in active inputs ================*/
@@ -1589,6 +1593,9 @@ select::-ms-expand {
 
 label[for] {
   cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
 }
 
 /*================ Horizontal Form ================*/
@@ -2312,7 +2319,7 @@ label.error {
 }
 
 .get-inspired-container {
-  margin-bottom: $gutter;
+  margin-bottom: $gutter * 2;
   
   .get-inspired-section {    
     .get-inspired-section--message {
@@ -2516,7 +2523,7 @@ label.error {
 }
 
 .product-single__photos {
-  margin-bottom: $gutter;
+  margin-bottom: $gutter / 2;
 }
 
 .product-single__photos,
@@ -2528,6 +2535,29 @@ label.error {
 
   li {
     margin-bottom: $gutter;
+  }
+}
+
+
+.product-price-compare {
+  margin-bottom: $gutter;
+}
+
+form {
+  
+  .selector-wrapper-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+    margin-bottom: $gutter / 2;
+    
+    .selector-wrapper {
+      flex: 0 1 8rem;
+      -webkit-flex: 0 1 8rem;
+    }
   }
 }
 
