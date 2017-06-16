@@ -2561,6 +2561,32 @@ form {
   }
 }
 
+/*============================================================================
+  #How to Use Page
+==============================================================================*/
+
+.how-to-use {
+  float: left;
+  position: absolute;
+  
+  padding: 0 $gutter;
+  margin-top: -380px;
+  margin-left: 120px;
+  
+  @include at-query ($min, $medium) {
+    padding: 0 $gutter * 6;
+    margin-left: 20px;
+  }
+}
+
+
+.use-direction-nav {
+  display: none;
+  
+  @include at-query ($min, $medium) {
+    display: block;
+  }
+}
 
 /*============================================================================
   #Notes and Form Feedback
@@ -2924,35 +2950,21 @@ form {
 /* Font-face Icons */
 @font-face {
 	font-family: 'flexslider-icon';
-	src:url('fonts/flexslider-icon.eot');
-	src:url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/flexslider-icon.woff') format('woff'),
-		url('fonts/flexslider-icon.ttf') format('truetype'),
-		url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+	src:url('flexslider-icon.eot');
+	src:url('flexslider-icon.eot?#iefix') format('embedded-opentype'),
+		url('flexslider-icon.woff') format('woff'),
+		url('flexslider-icon.ttf') format('truetype'),
+		url('flexslider-icon.svg#flexslider-icon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
-/*
-ol {
-  padding: 0;
-  margin: 0 0 ($gutter + 10) 0;
-}
-*/
 
 /* FlexSlider Necessary Styles
 *********************************/
-.flexslider {
-  margin: 0; padding: 0;
-
-}
-
-/* .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} */ /* Hide the slides before the JS is loaded. Avoids image jumping */
-// .flexslider .slides img {width: 100%; display: block;}
-.flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
-.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+// .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
 html[xmlns] .slides {display: block;}
 * html .slides {height: 1%;}
 
@@ -2963,78 +2975,134 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider { margin: 0 0 20px; background:none; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 0px; border-radius: 0px; zoom: 1; }
-.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
-.loading .flex-viewport { max-height: 300px; }
-.flexslider .slides { zoom: 1; }
+
+.loading {
+  .flex-viewport,
+  .use-viewport {
+    max-height: 300px;
+  }
+}
+
 .carousel li { margin-right: 5px; }
 
-
-.flexslider {
-  .slides {
-    & > li {
-      display: none; -webkit-backface-visibility: hidden; /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider,
+.flexslider2,
+.flexslider3 {
+  margin: 0; padding: 0;
+  margin: 0 0 20px;
+  background: none;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  zoom: 1;
+  
+  &:hover {
+    .flex-prev,
+    .use-prev {
+      opacity: 0.7; left: 10px;
       
-      .flex-first-image {
-        width: 100%;
-        background: url('{{ "slider_1_phone.jpg" | asset_url }}') no-repeat 0 0;
-        height: 340px;
-        background-size: contain;
-        
-        @include at-query($min, $medium) {
-          background: url('{{ "slider_1_tablet.jpg" | asset_url }}') no-repeat 0 0;
-          height: 440px;
-          background-size: contain;
-        }
-        
-        @include at-query($min, $large) {
-          background: url('{{ "slider_1_desktop.jpg" | asset_url }}') no-repeat 0 0;
-          height: 540px;
-          background-size: contain;
-        }
-      }
-      
-      .flex-second-image {
-        width: 100%;
-        background: url('{{ "slider_2_phone.jpg" | asset_url }}') no-repeat 0 0;
-        height: 340px;
-        background-size: contain;
-        
-        @include at-query($min, $medium) {
-          background: url('{{ "slider_2_tablet.jpg" | asset_url }}') no-repeat 0 0;
-          height: 440px;
-          background-size: contain;
-        }
-        
-        @include at-query($min, $large) {
-          background: url('{{ "slider_2_desktop.jpg" | asset_url }}') no-repeat 0 0;
-          height: 540px;
-          background-size: contain;
-        }
-      }
-      
-      .flex-third-image {
-        width: 100%;
-        background: url('{{ "slider_3_phone.jpg" | asset_url }}') no-repeat 0 0;
-        height: 340px;
-        background-size: contain;
-        
-        @include at-query($min, $medium) {
-          background: url('{{ "slider_3_tablet.jpg" | asset_url }}') no-repeat 0 0;
-          height: 440px;
-          background-size: contain;
-        }
-        
-        @include at-query($min, $large) {
-          background: url('{{ "slider_3_desktop.jpg" | asset_url }}') no-repeat 0 0;
-          height: 540px;
-          background-size: contain;
-        }
+      &:hover {
+        opacity: 1;
       }
     }
     
-    img {
-      width: 100%; display: block;
+    .flex-next,
+    .use-next {
+      opacity: 0.7; right: 10px;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .flex-viewport,
+  .use-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  
+    .slides {
+      zoom: 1;
+      
+      &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+      }
+      
+      & > li {
+        display: none;
+        -webkit-backface-visibility: hidden; /* Hide the slides before the JS is loaded. Avoids image jumping */
+        
+        .flex-first-image {
+          width: 100%;
+          background: url('{{ "slider_1_phone.jpg" | asset_url }}') no-repeat 0 0;
+          height: 340px;
+          background-size: contain;
+          
+          @include at-query($min, $medium) {
+            background: url('{{ "slider_1_tablet.jpg" | asset_url }}') no-repeat 0 0;
+            height: 440px;
+            background-size: contain;
+          }
+          
+          @include at-query($min, $large) {
+            background: url('{{ "slider_1_desktop.jpg" | asset_url }}') no-repeat 0 0;
+            height: 540px;
+            background-size: contain;
+          }
+        }
+        
+        .flex-second-image {
+          width: 100%;
+          background: url('{{ "slider_2_phone.jpg" | asset_url }}') no-repeat 0 0;
+          height: 340px;
+          background-size: contain;
+          
+          @include at-query($min, $medium) {
+            background: url('{{ "slider_2_tablet.jpg" | asset_url }}') no-repeat 0 0;
+            height: 440px;
+            background-size: contain;
+          }
+          
+          @include at-query($min, $large) {
+            background: url('{{ "slider_2_desktop.jpg" | asset_url }}') no-repeat 0 0;
+            height: 540px;
+            background-size: contain;
+          }
+        }
+        
+        .flex-third-image {
+          width: 100%;
+          background: url('{{ "slider_3_phone.jpg" | asset_url }}') no-repeat 0 0;
+          height: 340px;
+          background-size: contain;
+          
+          @include at-query($min, $medium) {
+            background: url('{{ "slider_3_tablet.jpg" | asset_url }}') no-repeat 0 0;
+            height: 440px;
+            background-size: contain;
+          }
+          
+          @include at-query($min, $large) {
+            background: url('{{ "slider_3_desktop.jpg" | asset_url }}') no-repeat 0 0;
+            height: 540px;
+            background-size: contain;
+          }
+        }
+      }
+      
+      img {
+        width: 100%; display: block;
+      }
     }
   }
   
@@ -3042,125 +3110,180 @@ html[xmlns] .slides {display: block;}
   ol {
     margin: 0 0 6px 0;
     
-    &.flex-control-nav { width: 100%;
+    &.flex-control-nav,
+    &.use-control-nav {
+      width: 100%;
       position: absolute;
       bottom: 0px;
       text-align: center;
       display: block;
-    }
-    
-    &.flex-control-nav li {
-      margin: 0 6px;
-      display: inline-block;
-      zoom: 1; *display: inline;
-    }
-  
-    &.flex-control-paging li a { 
-      width: $gutter / 2;
-      height: $gutter / 2;
-      display: block;
-      background: $colorBorder;
-      cursor: pointer;
-      text-indent: -9999px;
-      -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px;
-    }
-    
-    &.flex-control-paging li a:hover {
-      background: $colorTextBlackFive;
-    }
-    
-    &.flex-control-paging li a.flex-active {
-      background: $colorPrimary;
-      cursor: default;
-    }
-  }
-  
-  
-  /* Direction Nav */
-  .flex-direction-nav { 
-    *height: 0;
-    display: block;
-    list-style: none;
-    
-    a {
-      text-decoration:none;
-      display: block;
-      width: $gutter;
-      height: $gutter;
-      margin: -20px 0 0;
-      position: absolute;
-      top: 50%;
-      z-index: 10;
-      overflow: hidden;
-      opacity: 1;
-      cursor: pointer;
-      color: #fff;
-      -webkit-transition: all .3s ease;
-      -moz-transition: all .3s ease;
-      transition: all .3s ease;
       
-      &.flex-prev { left: 0px; }
-    
-      &:before {
-        font-family: "twelveways2017-icons";
-        font-size: em(30px);
-        line-height: 1;
-        display: inline-block;
-        content: '\e903';
+      @include at-query($min, $large) {
+        bottom: 24px;
       }
       
-      &.flex-next {
-        right: 0px; text-align: right;
-        
-        &:before {
-          content: '\e900';
+      li {
+        margin: 0 6px;
+        display: inline-block;
+        zoom: 1; *display: inline;
+      }
+    }
+  
+    &.flex-control-paging,
+    &.use-control-paging { 
+      li {
+        a {
+          width: $gutter / 2;
+          height: $gutter / 2;
+          display: block;
+          background: $colorBorder;
+          cursor: pointer;
+          text-indent: -9999px;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -o-border-radius: 20px;
+          border-radius: 20px;
+          
+          &:hover {
+            background: $colorTextBlackFive;
+          }
+          
+          &.flex-active,
+          &.use-active {
+            background: $colorPrimary;
+            cursor: default;
+          }
         }
       }
     }
   }
   
+  /* Direction Nav */
+  ul {
+    margin: 0;
+    
+    &.flex-direction-nav,
+    &.use-direction-nav { 
+      *height: 0;
+      display: block;
+      list-style: none;
+      
+      a {
+        text-decoration: none;
+        display: block;
+        width: $gutter;
+        height: $gutter;
+        margin: -20px 0 0;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        overflow: hidden;
+        opacity: 1;
+        cursor: pointer;
+        color: #fff;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        transition: all .3s ease;
+        
+        &.flex-prev,
+        &.use-prev {
+          left: 0px;
+          
+          &:before {
+            font-family: "twelveways2017-icons";
+            font-size: em(30px);
+            line-height: 1;
+            display: inline-block;
+            content: '\e903';
+          }
+        }
+        
+        &.flex-next,
+        &.use-next {
+          right: 0px;
+          text-align: right;
+          
+          &:before {
+            font-family: "twelveways2017-icons";
+            font-size: em(30px);
+            line-height: 1;
+            display: inline-block;
+            content: '\e900';
+          }
+        }
+      }
+    }
+  }
   
   /* Pause/Play */
-  .flex-pauseplay {
+  .flex-pauseplay,
+  .use-pauseplay {
     a { 
-      display: block; width: 17px; height: 22px; position: absolute; bottom: 10px; left: 32%; opacity: 1; z-index: 10; overflow: hidden; cursor: pointer; color: $colorBody;
+      display: block;
+      width: 17px;
+      height: 22px;
+      position: absolute;
+      bottom: 10px;
+      left: 32%;
+      opacity: 1;
+      z-index: 10;
+      overflow: hidden;
+      cursor: pointer;
+      color: $colorBody;
       
       @include at-query($min, $medium) {
         left: 41%;
       }
       
       @include at-query($min, $large) {
-        left: 43%; 
+        left: 45%;
+        bottom: 35px; 
       }
       
       &:before {
-        font-family: "flexslider-icon"; font-size: 20px; display: inline-block; content: '\f004';
+        font-family: "flexslider-icon";
+        font-size: 20px;
+        display: inline-block;
+        content: '\f004';
       }
       
       &:hover { opacity: 1; }
       
-      &.flex-play:before { content: '\f003'; }
+      &.flex-play:before,
+      &.use-play:before { content: '\f003'; }
     }
     
-    .flexslider:hover .flex-prev { opacity: 0.7; left: 10px; }
-    .flexslider:hover .flex-next { opacity: 0.7; right: 10px; }
-    .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
+    span {
+      text-transform: capitalize;
+    }
   }
-
 }
 
-.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
-.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
-.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
-.flex-control-thumbs img:hover {opacity: 1;}
-.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
-
-
-
-
-/*
-@media screen and (max-width: 860px) {
-  .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
-  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+.flex-control-thumbs,
+.use-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+  
+  li {
+    width: 25%;
+    float: left;
+    margin: 0;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+    opacity: 0.7;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+  .flex-active,
+  .use-active {
+    opacity: 1; cursor: default;
+  }
 }
-*/
