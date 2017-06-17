@@ -2589,6 +2589,175 @@ form {
 }
 
 /*============================================================================
+  #Hero Video
+==============================================================================*/
+
+/* #Images
+================================================== */
+
+/*
+  The purpose of the below declaration is to make sure images don't
+  exceed the width of columns they are put into when resizing window.
+  Unfortunately, this declaration breaks certain lightbox, slider or other plugins,
+  so the best solution is to individually call these properties on images that
+  are children of the grid that you want to resize with grid.
+*/
+.product_row img, .product_image_col img, .article img, .article_image img, .section img, .thumbnail img, .logo img, .page img, .sidebar img, #target img {
+  max-width: 100%;
+  height: auto;
+}
+.zoomImg {
+  max-width: inherit !important;
+  cursor: pointer;
+}
+  
+.description_wide img {
+  width: 100%;
+}
+
+.transition-in {
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.transition-in.lazyloaded {
+  opacity: 1;
+  max-width: 100%;
+  height: auto;
+}
+
+.lazyloading {
+  min-height: 100px;
+}
+
+img[data-sizes="auto"] {
+  display: block;
+  width: 100%;
+}
+
+
+/* #Videos
+================================================== */
+/*
+  For YouTube and Vimeo videos, wrap the embedded code snippet
+  in a <div class="video-container"> tag to allow it to resize.
+  To restrict the width, wrap with an additional <div class="video-wrapper">
+*/
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper {
+  width: 600px;
+  max-width: 100%;
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* #Home page - video */
+
+.homepage-video {
+  position: relative;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .homepage-video--media {
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+  }
+  
+  .caption.text-on-video {
+    z-index: 3;
+    pointer-events: none;
+  }
+  
+  .mediaWrapper {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    
+    {% if settings.video_dark_overlay != blank %}
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.5);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+    }
+    {% endif %}
+  }
+  
+  .first_button {
+    pointer-events: true;
+  }
+}
+
+/*
+.caption {
+  color: {{ settings.banner_color }};
+  position: absolute;
+  top: 50%;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  pointer-events: none;
+  text-align: center;
+  
+  a {
+    pointer-events: all;
+  }
+}
+*/
+
+
+/*============================================================================
   #Notes and Form Feedback
 ==============================================================================*/
 .note,
