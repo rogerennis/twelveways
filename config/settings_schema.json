@@ -514,5 +514,130 @@
         "label": "Link to something / somewhere"
       }
     ]
+  },
+  {
+    "name": "Hero video",
+    "settings": [
+      {
+        "type": "select",
+        "id": "banner_video_source",
+        "label": "Video source",
+        "options": [
+          {
+            "value": "youtube",
+            "label": "YouTube"
+          },
+          {
+            "value": "vimeo",
+            "label": "Vimeo"
+          },
+          {
+            "value": "html5",
+            "label": "HTML5"
+          }
+        ],
+        "default": "vimeo"
+      },
+      {
+        "type": "select",
+        "id": "aspect_ratio",
+        "label": "Aspect ratio",
+        "options": [
+          {
+            "value": "16:9",
+            "label": "16:9"
+          },
+          {
+            "value": "4:3",
+            "label": "4:3"
+          }
+        ],
+        "default": "16:9"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_video_autoloop",
+        "label": "Autoloop video",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_video_autoplay",
+        "label": "Autoplay video"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_video_text",
+        "label": "Display heading over video"
+      },
+      {
+        "type": "checkbox",
+        "id": "video_dark_overlay",
+        "label": "Darken video"
+      },
+      {
+        "type": "text",
+        "id": "banner_video_id",
+        "label": "YouTube or Vimeo Video ID",
+        "default": "87701971"
+      },
+      {
+        "type": "text",
+        "id": "banner_video_mp4",
+        "label": "HTML5 MP4 File URL"
+      },
+      {
+        "type": "text",
+        "id": "banner_video_ogv",
+        "label": "HTML5 OGV File URL (optional)"
+      },
+      {
+        "type": "image",
+        "id": "banner_video_poster.jpg",
+        "label": "Image",
+        "info": "1600 x 900px recommended",
+        "max-width": 1600,
+        "max-height": 800
+      },
+      {
+        "type": "text",
+        "id": "banner_video_headline",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "banner_video_subtitle",
+        "label": "Subheading"
+      },
+      {
+        "type": "select",
+        "id": "banner_video_text_align",
+        "label": "Text alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "banner_video_button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "text",
+        "id": "banner_video_link",
+        "label": "Link URL"
+      }
+    ]
   }
 ]

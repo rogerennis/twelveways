@@ -1,0 +1,72 @@
+<!-- /snippets/hero-video.liquid -->
+{% comment %}
+
+  A snippet to include a hero video anywhere in your theme.
+
+  More information:
+   - http://docs.shopify.com/themes/liquid-variables/search
+
+{% endcomment %}
+
+{% if settings.slider_enable %}
+
+  <section class="flexslider">
+    <ul class="slides">
+    {% if settings.first_image_active %}  
+      <li>
+        <a href="{{ settings.first_link }}"><div class="flex-first-image" title="{{ settings.first_image_title | escape }}"></div></a>
+      </li>
+    {% endif %}  
+    {% if settings.second_image_active %}  
+      <li>
+        <a href="{{ settings.second_link }}"><div class="flex-second-image" title="{{ settings.second_image_title | escape }}"></div></a>
+      </li>
+    {% endif %}
+    {% if settings.third_image_active %}  
+      <li>
+        <a href="{{ settings.third_link }}"><div class="flex-third-image" title="{{ settings.third_image_title | escape }}"></div></a>
+      </li>
+    {% endif %}
+    </ul>
+  </section>
+
+{% endif %}
+
+
+
+<div id="homepage-video" class="homepage-video">
+  <div class="homepage-video--media"
+    data-video-src="{{ settings.banner_video_id }}"
+    data-aspect-ratio="{{ settings.aspect_ratio }}"
+    data-provider="{{ settings.banner_video_source }}"
+    data-video-mp4="{{ settings.banner_video_mp4 }}"
+    data-video-ogv="{{ settings.banner_video_ogv }}">
+    <img  data-play-video
+          data-sizes="auto"
+          data-src="{{ 'banner_video_poster.jpg' | asset_img_url: '1200x' }}"
+          data-srcset=" {{ 'banner_video_poster.jpg' | asset_img_url: '480x' }} 480w,
+                        {{ 'banner_video_poster.jpg' | asset_img_url: '768x' }} 768w,
+                        {{ 'banner_video_poster.jpg' | asset_img_url: '1200x' }} 1200w,
+                        {{ 'banner_video_poster.jpg' | asset_img_url: '2048x2048' }} 2048w"
+          class="lazyload transition-in"
+          alt="{{ settings.video_headline | escape }}" />
+
+    <div class="flex-caption flexslider caption js-caption text-on-video">
+      <div class="container">
+        <div class="columns {% if settings.banner_video_text_align == 'left' %} align_left seven offset-by-one {% elsif settings.banner_video_text_align == 'right' %} align_left caption_right seven offset-by-eight {% else %} ten offset-by-three {% endif %}">
+          <p class="headline">
+            {{ settings.banner_video_headline }}
+          </p>
+          <p class="subtitle">
+            {{ settings.banner_video_subtitle }}
+          </p>
+          {% if settings.banner_video_button_text != blank %}
+            <a {% if settings.banner_video_link != blank %}href="{{ settings.banner_video_link }}"{% else %}data-play-video{% endif %} class="action_button">
+              {{ settings.banner_video_button_text }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
