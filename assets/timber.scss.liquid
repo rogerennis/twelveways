@@ -962,7 +962,7 @@ hr {
   height: 0;
 
   &.hr--small {
-    margin: ($gutter / 2) 0;
+    margin: ($gutter) 0;
   }
 
   &.hr--clear {
@@ -2917,7 +2917,89 @@ form {
 
 {% endif %} // settings.ajax_cart_method
 
+/*============================================================================
+  #Password Page
+==============================================================================*/
+.password-page-html {
+  padding-top: 0;
+}
 
+.template-password {
+  height: 100vh;
+  text-align: center;
+  
+  .password-page__wrapper {
+    display: table;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+    width: 100%;
+    background-image: url(//cdn.shopify.com/s/files/1/0964/2474/t/2/assets/password-page-background.jpg?2027301311548540641);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    
+    .password-page__header {
+      display: table-row;
+      height: 1px;
+      
+      .password-page__header__inner {
+        display: table-cell;
+        padding: ($gutter / 2) ($gutter) ($gutter) ($gutter + 10);
+        
+        .password-login {
+          margin-top: $gutter;
+          text-transform: uppercase;
+          
+          a {
+            color: #fff;
+            font-weight: 500;
+            
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        
+        .password-page__logo {
+          margin-top: $gutter * 2;
+          
+          .password-header__logo {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 100%;
+            font-size: 6em;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.body-container {
+  
+  @include at-query ($min, $medium) {
+     max-width: 425px;
+     margin: 0 auto;
+  }
+}
+
+.form-content-container {
+  margin: $gutter 0;
+  
+  .actions {
+    margin-top: 10px;
+  }
+}
+
+#powered a {
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAACl0lEQVR4AW2RS2jcdRSFv3v/j5nJOBnbJCba0DQ2qU1aqw0oOqB0oxbB564gFLvothvBlWQjuJBCwcfOhYouBF2ILlMsFKWSIopFFNNSkyxaqxPzmJn/43evmUVpFv3gu9zNgQNHuAsfnn/2tLufcHgI9E3gU+6CvL/wHDsR/A3EDwiy6HAMmBbxsze+a30BGDuQ+fl5brP76Uv7I7GXFTbMfVTQKyL+tigzS9ey9fWOvxaJXQTaAPHN0QVuMyq14+Ycd5EN8FcQQ1QA2Owy2F4LXw/tilZ0WGaAzViGI2ZHKlO4f4xErTJsspW1EVEiTRisDeMugCMIvYzx5rruAX7XZF3B/flI4lY3b6OS0Jo6zUtH3+WJB0/hGEUoMAONIAQnTayxLXH/CLKvV25QTZq8OneOseYMANfTXfy0/BkeKpiBCAAUBU8Ci/H2g+OjWbHJ45Mn6Qcv/PEeW9mtbf8BDJUUsx4i9CUrbApAJw/URsR9QkTZXd8LgJtx/rezXP37Io3qfQRzzB1BKEsH9B5QNAphjyN7BeHPGxcAOHbwDCdbnxNrhcI6uDkh3Klt5nMDDZ1Q7++p+kA1GeSHpY/48vIZAB4ef5HJkRbdfA1zcHdEQFUIwafzzPepIuO9/L/o/uZhXnj0Hda6K2z0bgKQRnXcA2bgDgAIFAUDsXotdnx/GXrU0ub2NK/3BaDdWWa5fZlq0qDXcXZkcRArORqDHqpXhrl663u+/eUtDo49Q1Zu8eO1T+jk/3JvfQizHBzgToO8sMdicf9AJFpy84krq9/M/rzy1bS4RNV0kHo6BBghQBkcd4hjQRWynJqcOvcUO5l7pDGmhMPudgQ4lCZ65K/VfPb6arlVH5AFVX6tVHUxmF/6H+vwKe+hBs8sAAAAAElFTkSuQmCC);
+  padding-left: 21px;
+  color: #9c9c9c;
+  text-decoration: none;
+}
 
 /*============================================================================
   #Flexslider: Hero image slider

@@ -307,6 +307,17 @@
       "description": "Wear your TW system strapless; place one of the openings 3/4 to the front left, pull front and back strings all the way, tie a bow. Close back zipper."
     }
   },
+  "password_page": {
+    "header": {
+      "enter": "Enter using password"
+    },
+    "body": {
+      
+    },
+    "footer": {
+      
+    }
+  },
   "layout": {
     "navigation": {
       "menu": "Menu"
