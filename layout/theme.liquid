@@ -42,6 +42,7 @@
 
   {{ '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' | script_tag }}
   {{ 'modernizr.min.js' | asset_url | script_tag }}
+  {{ 'hero-video.js' | asset_url | script_tag }}
 
   {% comment %}
     If you store has customer accounts disabled, you can remove the following JS file
@@ -374,10 +375,6 @@
       {% include 'hero-image-slider' %}
     {% endif %}
     
-     {% if template.name == 'get-inspired' %}
-      {% include 'hero-image-slider' %}
-    {% endif %}
-    
     <main class="wrapper main-content" role="main">
 
       {{ content_for_layout }}
@@ -518,7 +515,7 @@
     </footer>
     <!-- //site-footer -->
   </div>
-
+  
   {{ 'fastclick.min.js' | asset_url | script_tag }}
   {{ 'timber.js' | asset_url | script_tag }}
   

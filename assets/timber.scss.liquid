@@ -57,6 +57,7 @@ $viewportIncrement: 1px;
 $small: 480px;
 $medium: 768px;
 $large: 769px;
+$largehd: 1200px;
 
 $postSmall: $small + $viewportIncrement;
 $preMedium: $medium - $viewportIncrement;
@@ -2589,6 +2590,85 @@ form {
 }
 
 /*============================================================================
+  #Get Inspired Page
+==============================================================================*/
+
+.get-inspired-page-container {
+  
+  h2 {
+    margin-bottom: $gutter;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    
+    &.get-inspired__categories {
+      
+      li {
+        margin-bottom: $gutter;
+        
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        
+        @include at-query ($min, 568px) {
+          &:nth-last-of-type(2) {
+            margin-bottom: 0;
+          }
+        }
+        
+        a {
+          color: $colorPrimaryBlack;
+          background: #fff;
+          text-align: center;
+          border: 1px solid $colorBorder;
+          border-top: 4px solid $colorPrimary;
+          padding: ($gutter * 2) ($gutter * 3) ($gutter * 2);
+          display: block;
+          transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+          -o-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+          -ms-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+          -moz-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+          -webkit-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+          height: 200px;
+          
+          @include at-query ($min, 568px) {
+            padding-left: $gutter * 2.1;
+            padding-right: $gutter * 2.1;
+          }
+          
+          @include at-query ($min, $medium) {
+            padding-left: $gutter * 3.5;
+            padding-right: $gutter * 3.5;
+            height: 210px;
+          }
+          
+           @include at-query ($min, $large) {
+            height: 180px;
+          }
+          
+          h3 {
+            
+          }
+          
+          &:hover {
+            color: #fff;
+            background: $colorPrimary;
+            border: 1px solid $colorPrimary;
+            padding-top: ($gutter * 2 + 3px);
+            transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            -ms-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            -moz-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            -webkit-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*============================================================================
   #Hero Video
 ==============================================================================*/
 
@@ -2662,11 +2742,6 @@ img[data-sizes="auto"] {
   height: 100%;
 }
 
-.video-wrapper {
-  width: 600px;
-  max-width: 100%;
-}
-
 video {
   display: block;
   width: 100%;
@@ -2680,20 +2755,35 @@ video {
   position: relative;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
+  margin: ($gutter + 10) 0 ($gutter * 2.5);
+  
+  .video-wrapper {
+    position: initial;
+    width: 91vw;
+    max-width: 100%;
+    
+    @include at-query ($min, $medium) {
+      width: 92vw;
+    }
+    
+    @include at-query ($min, $largehd) {
+      max-width: 78vw;
+    }
+  
+    iframe {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
   
   img {
     width: 100%;
     display: block;
-  }
-  
-  iframe {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
   }
   
   video {
@@ -2719,6 +2809,7 @@ video {
     position: absolute !important;
     top: 0;
     left: 0;
+    width: auto !important;
     
     {% if settings.video_dark_overlay != blank %}
     &:after {

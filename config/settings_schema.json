@@ -516,7 +516,7 @@
     ]
   },
   {
-    "name": "Hero video",
+    "name": "Hero Video (Get Inspired)",
     "settings": [
       {
         "type": "select",
@@ -550,6 +550,18 @@
           {
             "value": "4:3",
             "label": "4:3"
+          },
+          {
+            "value": "16:10",
+            "label": "16:10"
+          },
+          {
+            "value": "1.85:1",
+            "label": "1.85:1"
+          },
+          {
+            "value": "2.35:1",
+            "label": "2.35:1"
           }
         ],
         "default": "16:9"
@@ -579,7 +591,7 @@
         "type": "text",
         "id": "banner_video_id",
         "label": "YouTube or Vimeo Video ID",
-        "default": "87701971"
+        "default": "brD70n5u52o"
       },
       {
         "type": "text",
@@ -595,9 +607,9 @@
         "type": "image",
         "id": "banner_video_poster.jpg",
         "label": "Image",
-        "info": "1600 x 900px recommended",
-        "max-width": 1600,
-        "max-height": 800
+        "info": "2240 x 720px recommended",
+        "max-width": 2240,
+        "max-height": 720
       },
       {
         "type": "text",
