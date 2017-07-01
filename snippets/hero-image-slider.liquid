@@ -12,7 +12,7 @@
 
   <section class="flexslider">
     <ul class="slides">
-    {% if settings.first_image_active %}  
+    {% if settings.first_image_active %}
       <li>
         <a href="{{ settings.first_link }}"><div class="flex-first-image" title="{{ settings.first_image_title | escape }}"></div></a>
       </li>
@@ -31,30 +31,3 @@
   </section>
 
 {% endif %}
-
-
-<!--
-{% if settings.slider_enable %}
-
-  <section class="flexslider">
-    <ul class="slides">
-    {% if settings.first_image_active %}  
-      <li class="flex-image">
-        <a href="{{ settings.first_link }}"><img src="{{ 'slide_1.jpg' | asset_url }}" alt="{{ settings.first_image_alt | escape }}" /></a>
-      </li>
-    {% endif %}  
-    {% if settings.second_image_active %}  
-      <li class="flex-image">
-        <a href="{{ settings.second_link }}"><img src="{{ 'slide_2.jpg' | asset_url }}" alt="{{ settings.second_image_alt | escape }}" /></a>
-      </li>
-    {% endif %}
-    {% if settings.third_image_active %}  
-      <li class="flex-image">
-        <a href="{{ settings.third_link }}"><img src="{{ 'slide_3.jpg' | asset_url }}" alt="{{ settings.third_image_alt | escape }}" /></a>
-      </li>
-    {% endif %}
-    </ul>
-  </section>
-
-{% endif %}
--->

@@ -528,14 +528,14 @@
     
     $('.flexslider').flexslider({
       animation: "{{ settings.slider_animation }}",
-      animationLoop: false,
+      animationLoop: {{ settings.animation_loop }},
       keyboard: true,
       pausePlay: true
     });
     
     $('.flexslider2').flexslider({
-      animation: "slide",
-      animationLoop: false,
+      animation: "{{ settings.howToUse_slider_animation }}",
+      animationLoop: {{ settings.howToUse_animation_loop }},
       keyboard: true,
       pausePlay: true,
       namespace: "use-"

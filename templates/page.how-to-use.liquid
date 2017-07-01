@@ -4,100 +4,143 @@
 
 <section class="grid">
 
-  <div class="grid__item large--two-thirds push--large--one-sixth">
+  <div class="grid__item">
 
     <h1 itemprop="name">{{ page.title }}</h1>
 
-    <div class="slider push--large--one-quarter">
+    <div class="slider">
+        
+        {% if settings.howToUse_slider_enable %}
+        
         <div class="flexslider2">
           <ul class="slides">
+            
+            {% if settings.way1_image_active %}
             <li>
-              <img src="howToUse_01.png" class="left" />
+              <img src="{{ 'howToUse_01.png' | asset_url }}" alt="{{ settings.way1_alt }}" class="left" />
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_one.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_one.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_one.description' | t }}</p>
               </div>
             </li> 
+            {% endif %}
+            
+            {% if settings.way2_image_active %}
             <li>
-              <img src="howToUse_02.png" class="left" />
+              <img src="{{ 'howToUse_02.png' | asset_url }}" alt="{{ settings.way2_alt }}" class="left" />
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_two.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_two.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_two.description' | t }}</p>
               </div>
-            </li> 
+            </li>
+            {% endif %}
+            
+            {% if settings.way3_image_active %}
             <li>
-              <img src="howToUse_03.png" class="left"/>
+              <img src="{{ 'howToUse_03.png' | asset_url }}" alt="{{ settings.way3_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_three.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_three.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_three.description' | t }}</p>
               </div>
             </li>
+            {% endif %}
+            
+            {% if settings.way4_image_active %}
             <li>
-              <img src="howToUse_04.png" class="left"/>
+              <img src="{{ 'howToUse_04.png' | asset_url }}" alt="{{ settings.way4_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_four.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_four.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_four.description' | t }}</p>
-                <img src="howToUse_04Circle.png" class="left" width="150px" height="150px"/>
+                <img src="{{ 'howToUse_04Circle.png' | asset_url }}" alt="{{ settings.way4Circle_alt }}" class="left"/>
               </div>
             </li>
+            {% endif %}
+            
+            {% if settings.way5_image_active %}
             <li>
-              <img src="howToUse_05.png" class="left"/>
+              <img src="{{ 'howToUse_05.png' | asset_url }}" alt="{{ settings.way5_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_five.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_five.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_five.description' | t }}</p>
               </div>
             </li>
+            {% endif %}
+            
+            {% if settings.way6_image_active %}
             <li>
-              <img src="howToUse_06.png" class="left"/>
+              <img src="{{ 'howToUse_06.png' | asset_url }}" alt="{{ settings.way6_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_six.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_six.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_six.description' | t }}</p>
               </div>
             </li>
+            {% endif %}
+            
+            {% if settings.way7_image_active %}
             <li>
-              <img src="howToUse_07.png" class="left"/>
+              <img src="{{ 'howToUse_07.png' | asset_url }}" alt="{{ settings.way7_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_seven.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_seven.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_seven.description' | t }}</p>
               </div>
             </li>
+            {% endif %}
+            
+            {% if settings.way8_image_active %}
             <li>
-              <img src="howToUse_08.png" class="left"/>
+              <img src="{{ 'howToUse_08.png' | asset_url }}" alt="{{ settings.way8_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_eight.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_eight.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_eight.description' | t }}</p>
               </div>
             </li>
+            {% endif %}
+            
+            {% if settings.way9_image_active %}
             <li>
-              <img src="howToUse_09.png" class="left"/>
+              <img src="{{ 'howToUse_09.png' | asset_url }}" alt="{{ settings.way9_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_nine.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_nine.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_nine.description' | t }}</p>
               </div>
             </li>
+            {% endif %}
+            
+            {% if settings.way10_image_active %}
             <li>
-              <img src="howToUse_10.png" class="left"/>
+              <img src="{{ 'howToUse_10.png' | asset_url }}" alt="{{ settings.way10_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_ten.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_ten.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_ten.description' | t }}</p>
               </div>
             </li>
+            {% endif %}
+            
+            {% if settings.way11_image_active %}
             <li>
-              <img src="howToUse_11.png" class="left"/>
+              <img src="{{ 'howToUse_11.png' | asset_url }}" alt="{{ settings.way11_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_eleven.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_eleven.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_eleven.description' | t }}</p>
               </div>
             </li>
+            {% endif %}
+            
+            {% if settings.way12_image_active %}
             <li>
-              <img src="howToUse_12.png" class="left"/>
+              <img src="{{ 'howToUse_12.png' | asset_url }}" alt="{{ settings.way12_alt }}" class="left"/>
               <div class="how-to-use">
-                <h2>{{ 'how_to_use.style_twelve.style' | t }}</h2>
+                <h3>{{ 'how_to_use.style_twelve.title' | t }}</h3>
                 <p>{{ 'how_to_use.style_twelve.description' | t }}</p>
               </div>
             </li>
+            {% endif %}
+            
           </ul>
-        </div>  
+        </div>
+        
+        {% endif %}
+        
       </div>
   </div>
   

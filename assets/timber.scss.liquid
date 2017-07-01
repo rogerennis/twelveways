@@ -2301,19 +2301,19 @@ label.error {
   }
 }
 
-.twelve-styles-image {
-  background: url('{{ "twelve_styles_phone.jpg" | asset_url }}') no-repeat 0 0;
+.twelve-ways-image-homepage {
+  background: url('{{ "twelve_ways_phone.jpg" | asset_url }}') no-repeat 0 0;
   height: 20vh;
   background-size: 100%;
   
   @include at-query ($min, $medium) {
-    background: url('{{ "twelve_styles_tablet.jpg" | asset_url }}') no-repeat 0 0;
+    background: url('{{ "twelve_ways_tablet.jpg" | asset_url }}') no-repeat 0 0;
     height: 25vh;
     background-size: 100%;
   }
   
   @include at-query ($min, $large) {
-    background: url('{{ "twelve_styles_desktop.jpg" | asset_url }}') no-repeat 0 0;
+    background: url('{{ "twelve_ways_desktop.jpg" | asset_url }}') no-repeat 0 0;
     height: 32vh;
     background-size: 100%;
   }
@@ -2559,33 +2559,6 @@ form {
       flex: 0 1 8rem;
       -webkit-flex: 0 1 8rem;
     }
-  }
-}
-
-/*============================================================================
-  #How to Use Page
-==============================================================================*/
-
-.how-to-use {
-  float: left;
-  position: absolute;
-  
-  padding: 0 $gutter;
-  margin-top: -380px;
-  margin-left: 120px;
-  
-  @include at-query ($min, $medium) {
-    padding: 0 $gutter * 6;
-    margin-left: 20px;
-  }
-}
-
-
-.use-direction-nav {
-  display: none;
-  
-  @include at-query ($min, $medium) {
-    display: block;
   }
 }
 
@@ -3360,8 +3333,7 @@ html[xmlns] .slides {display: block;}
     }
   }
   
-  .flex-viewport,
-  .use-viewport {
+  .flex-viewport {
     max-height: 2000px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -3447,18 +3419,110 @@ html[xmlns] .slides {display: block;}
       }
     }
   }
+  .use-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  
+    .slides {
+      zoom: 1;
+      
+      &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+      }
+      
+      & > li {
+        display: none;
+        -webkit-backface-visibility: hidden; /* Hide the slides before the JS is loaded. Avoids image jumping */
+        
+        .how-to-use {
+          float: left;
+          position: relative;
+          
+          padding: $gutter ($gutter - 10) $gutter ($gutter * 4);
+          margin-top: -390px;
+          
+          @include at-query ($min, $medium) {
+            padding-left: 40%;
+            padding-right: 25%;
+          }
+          
+          @include at-query ($min, $large) {
+            padding-left: 45%;
+            padding-right: 30%;
+          }
+          
+          p {
+            font-size: em(14px);
+          }
+          
+          img {
+            position: absolute;
+            margin: (-$gutter * 2) (-$gutter * 3.5) 0; 
+            width: 40%;
+            
+            @include at-query ($min, $medium) {
+              margin: (-$gutter / 2) (-$gutter * 4.5) 0;
+              width: 23%;
+            }
+            
+            @include at-query ($min, $large) {
+              margin: (-$gutter / 2) (-$gutter * 5) 0;
+              width: 15%;
+            }
+          }
+        }
+      }
+      
+      img {
+        display: block;
+        
+        @include at-query($min, $medium) {
+          margin-left: 20%;
+        }
+        
+         @include at-query($min, $large) {
+          margin-left: 30%;
+        }
+      }
+    }
+  }
   
   /* Control Nav */
   ol {
     margin: 0 0 6px 0;
     
-    &.flex-control-nav,
-    &.use-control-nav {
+    &.flex-control-nav {
       width: 100%;
       position: absolute;
       bottom: 0px;
       text-align: center;
       display: block;
+      
+      @include at-query($min, $large) {
+        bottom: 24px;
+      }
+      
+      li {
+        margin: 0 6px;
+        display: inline-block;
+        zoom: 1; *display: inline;
+      }
+    }
+    
+    &.use-control-nav {
+      width: 100%;
+      position: relative;
+      bottom: 0px;
+      text-align: center;
+      display: none;
       
       @include at-query($min, $large) {
         bottom: 24px;
@@ -3504,8 +3568,7 @@ html[xmlns] .slides {display: block;}
   ul {
     margin: 0;
     
-    &.flex-direction-nav,
-    &.use-direction-nav { 
+    &.flex-direction-nav { 
       *height: 0;
       display: block;
       list-style: none;
@@ -3526,6 +3589,61 @@ html[xmlns] .slides {display: block;}
         -webkit-transition: all .3s ease;
         -moz-transition: all .3s ease;
         transition: all .3s ease;
+        
+        &.flex-prev,
+        &.use-prev {
+          left: 0px;
+          
+          &:before {
+            font-family: "twelveways2017-icons";
+            font-size: em(30px);
+            line-height: 1;
+            display: inline-block;
+            content: '\e903';
+          }
+        }
+        
+        &.flex-next,
+        &.use-next {
+          right: 0px;
+          text-align: right;
+          
+          &:before {
+            font-family: "twelveways2017-icons";
+            font-size: em(30px);
+            line-height: 1;
+            display: inline-block;
+            content: '\e900';
+          }
+        }
+      }
+    }
+    
+    &.use-direction-nav { 
+      *height: 0;
+      display: block;
+      list-style: none;
+      
+      a {
+        text-decoration: none;
+        display: block;
+        width: $gutter;
+        height: $gutter;
+        margin: -20px 0 0;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        overflow: hidden;
+        opacity: 1;
+        cursor: pointer;
+        color: $colorTextBlackSix;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        transition: all .3s ease;
+        
+        @include at-query ($min, $large) {
+          height: $gutter + 2;
+        }
         
         &.flex-prev,
         &.use-prev {
