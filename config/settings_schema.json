@@ -247,7 +247,7 @@
     ]
   },
   {
-    "name": "Hero image slider (homepage)",
+    "name": "Hero image slider",
     "settings": [
       {
         "type": "header",
@@ -413,7 +413,110 @@
     ]
   },
   {
-    "name": "Twelve Ways Slider (Twelve Ways to Use page)",
+    "name": "Twelve Styles Image Section(home)",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Twelve ways image"
+      },
+      {
+        "type": "checkbox",
+        "id": "twelve_ways_enable",
+        "label": "Turn twelve ways image on"
+      },
+      {
+        "type": "image",
+        "id": "twelve_ways_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 770,
+        "max-height": 250,
+        "info": "770px x 250px .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "twelve_ways_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 1540,
+        "max-height": 460,
+        "info": "1540px x 440px .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "twelve_ways_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 2240,
+        "max-height": 720,
+        "info": "2240px x 720px .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "twelve_ways_image_title",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      }
+    ]
+  },
+  {
+    "name": "Get Inspired Section(home)",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Get inspired copy block"
+      },
+      {
+        "type": "color",
+        "id": "get_inspired_color",
+        "label": "Get inspired background color",
+        "default": "#9296a9"
+      },
+      {
+        "type": "header",
+        "content": "Get inspired image"
+      },
+      {
+        "type": "checkbox",
+        "id": "get_inspired_enable",
+        "label": "Turn get inspired section on"
+      },
+      {
+        "type": "image",
+        "id": "get_inspired_section_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 770,
+        "max-height": 500,
+        "info": "770px x 500px .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "get_inspired_section_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 1416,
+        "max-height": 700,
+        "info": "1416px x 700px .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "get_inspired_section_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 1120,
+        "max-height": 800,
+        "info": "1120px x 800px .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "get_inspired_image_title",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "text",
+        "id": "get_inspired_link",
+        "label": "Link to something / somewhere"
+      }
+    ]
+  },
+  {
+    "name": "Twelve Ways to Use Slider",
     "settings": [
       {
         "type": "header",
@@ -737,110 +840,7 @@
     ]
   },
   {
-    "name": "Twelve ways image (homepage)",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Twelve ways image"
-      },
-      {
-        "type": "checkbox",
-        "id": "twelve_ways_enable",
-        "label": "Turn twelve ways image on"
-      },
-      {
-        "type": "image",
-        "id": "twelve_ways_phone.jpg",
-        "label": "Upload phone image",
-        "max-width": 770,
-        "max-height": 250,
-        "info": "770px x 250px .jpg hi-res at 72dpi required"
-      },
-      {
-        "type": "image",
-        "id": "twelve_ways_tablet.jpg",
-        "label": "Upload tablet image",
-        "max-width": 1540,
-        "max-height": 460,
-        "info": "1540px x 440px .jpg hi-res at 72dpi required"
-      },
-      {
-        "type": "image",
-        "id": "twelve_ways_desktop.jpg",
-        "label": "Upload desktop image",
-        "max-width": 2240,
-        "max-height": 720,
-        "info": "2240px x 720px .jpg hi-res at 72dpi required"
-      },
-      {
-        "type": "text",
-        "id": "twelve_ways_image_title",
-        "label": "BRIEFLY, Describe your image",
-        "info": "5 women wearing twelveways on vacation"
-      }
-    ]
-  },
-  {
-    "name": "Get Inspired (homepage)",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Get inspired copy block"
-      },
-      {
-        "type": "color",
-        "id": "get_inspired_color",
-        "label": "Get inspired background color",
-        "default": "#9296a9"
-      },
-      {
-        "type": "header",
-        "content": "Get inspired image"
-      },
-      {
-        "type": "checkbox",
-        "id": "get_inspired_enable",
-        "label": "Turn get inspired section on"
-      },
-      {
-        "type": "image",
-        "id": "get_inspired_section_phone.jpg",
-        "label": "Upload phone image",
-        "max-width": 770,
-        "max-height": 500,
-        "info": "770px x 500px .jpg hi-res at 72dpi required"
-      },
-      {
-        "type": "image",
-        "id": "get_inspired_section_tablet.jpg",
-        "label": "Upload tablet image",
-        "max-width": 1416,
-        "max-height": 700,
-        "info": "1416px x 700px .jpg hi-res at 72dpi required"
-      },
-      {
-        "type": "image",
-        "id": "get_inspired_section_desktop.jpg",
-        "label": "Upload desktop image",
-        "max-width": 1120,
-        "max-height": 800,
-        "info": "1120px x 800px .jpg hi-res at 72dpi required"
-      },
-      {
-        "type": "text",
-        "id": "get_inspired_image_title",
-        "label": "BRIEFLY, Describe your image",
-        "info": "5 women wearing twelveways on vacation"
-      },
-      {
-        "type": "text",
-        "id": "get_inspired_link",
-        "label": "Link to something / somewhere"
-      }
-    ]
-  },
-  {
-    "name": "Hero Video (Get Inspired)",
+    "name": "Hero Video",
     "settings": [
       {
         "type": "select",
@@ -973,6 +973,1410 @@
         "type": "text",
         "id": "banner_video_link",
         "label": "Link URL"
+      }
+    ]
+  },
+  {
+    "name": "Get Inspired - Casual / Business",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Casual / Business"
+      },
+      {
+        "type": "checkbox",
+        "id": "getInspired_casualBusiness_enable",
+        "label": "Turn on the casual / business category"
+      },
+      {
+        "type": "header",
+        "content": "Image 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_1",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_1.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusiness_1_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_2",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_2.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusiness_2_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_3",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_3.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusiness_3_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_4",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_4.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusiness_4_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_5",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_5.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusiness_5_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 6"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_6",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_6.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusiness_6_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 7"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_7",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_7.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusiness_7_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 8"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_8",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_8.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusiness_8_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 9"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_9",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_9.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide.jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusiness_9_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 10"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusiness_active_10",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casualBusiness_10.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+          "id": "casualBusiness_10_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      }
+    ]
+  },
+  {
+    "name": "Get Inspired - Resort / Hotel",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Resort / Hotel"
+      },
+      {
+        "type": "checkbox",
+        "id": "getInspired_resortHotel_enable",
+        "label": "Turn on the resort / hotel category"
+      },
+      {
+        "type": "header",
+        "content": "Image 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_1",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_1.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotel_1_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_2",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_2.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotel_2_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_3",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_3.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotel_3_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_4",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_4.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotel_4_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_5",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_5.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotel_5_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 6"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_6",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_6.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "577px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotel_6_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 7"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_7",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_7.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotel_7_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 8"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_8",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_8.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotel_8_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 9"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_9",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_9.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotel_9_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 10"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotel_active_10",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resortHotel_10.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+          "id": "resortHotel_10_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      }
+    ]
+  },
+  {
+    "name": "Get Inspired - Cocktail / Evening",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Cocktail / Evening"
+      },
+      {
+        "type": "checkbox",
+        "id": "getInspired_cocktailEvening_enable",
+        "label": "Turn on the cocktail / evening category"
+      },
+      {
+        "type": "header",
+        "content": "Image 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_1",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_1.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEvening_1_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_2",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_2.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEvening_2_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_3",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_3.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEvening_3_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_4",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_4.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEvening_4_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_5",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_5.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEvening_5_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 6"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_6",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_6.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEvening_6_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 7"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_7",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_7.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEvening_7_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 8"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_8",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_8.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEvening_8_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 9"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_9",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_9.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEvening_9_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 10"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEvening_active_10",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktailEvening_10.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+          "id": "cocktailEvening_10_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      }
+    ]
+  },
+  {
+    "name": "Get Inspired - Holiday",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Holiday"
+      },
+      {
+        "type": "checkbox",
+        "id": "getInspired_holiday_enable",
+        "label": "Turn on the holiday category"
+      },
+      {
+        "type": "header",
+        "content": "Image 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_1",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_1.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "holiday_1_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_2",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_2.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "holiday_2_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_3",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_3.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "holiday_3_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_4",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_4.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "holiday_4_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_5",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_5.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "holiday_5_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 6"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_6",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_6.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "holiday_6_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 7"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_7",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_7.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "holiday_7_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 8"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_8",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_8.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "holiday_8_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 9"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_9",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_9.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "holiday_9_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 10"
+      },
+      {
+        "type": "checkbox",
+        "id": "holiday_active_10",
+        "label": "Turn on holiday image"
+      },
+      {
+        "type": "image",
+        "id": "holiday_10.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+          "id": "holiday_10_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      }
+    ]
+  },
+  {
+    "name": "Get Inspired - Fitness",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Fitness"
+      },
+      {
+        "type": "checkbox",
+        "id": "getInspired_fitness_enable",
+        "label": "Turn on the fitness category"
+      },
+      {
+        "type": "header",
+        "content": "Image 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_1",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_1.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitness_1_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_2",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_2.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitness_2_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_3",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_3.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitness_3_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_4",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_4.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitness_4_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_5",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_5.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitness_5_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 6"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_6",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_6.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitness_6_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 7"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_7",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_7.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitness_7_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 8"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_8",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_8.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitness_8_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 9"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_9",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_9.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitness_9_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 10"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitness_active_10",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_10.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+          "id": "fitness_10_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      }
+    ]
+  },
+  {
+    "name": "Get Inspired - Maternity",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Maternity"
+      },
+      {
+        "type": "checkbox",
+        "id": "getInspired_maternity_enable",
+        "label": "Turn on the maternity category"
+      },
+      {
+        "type": "header",
+        "content": "Image 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_1",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_1.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternity_1_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_2",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_2.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternity_2_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_3",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_3.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternity_3_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_4",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_4.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternity_4_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_5",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_5.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternity_5_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 6"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_6",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_6.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternity_6_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 7"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_7",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_7.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternity_7_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 8"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_8",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_8.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternity_8_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 9"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_9",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_9.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternity_9_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Image 10"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternity_active_10",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_10.jpg",
+        "label": "Upload image",
+        "max-width": 400,
+        "info": "400px wide .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+          "id": "maternity_10_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
       }
     ]
   }

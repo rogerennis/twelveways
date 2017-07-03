@@ -2563,7 +2563,7 @@ form {
 }
 
 /*============================================================================
-  #Get Inspired Page
+  #Get Inspired
 ==============================================================================*/
 
 .get-inspired-page-container {
@@ -2638,6 +2638,20 @@ form {
         }
       }
     }
+  }
+}
+
+
+/******** Category Page *******/
+
+.get-inspired-category-container {
+  p.page-subtitle {
+    font-size: em(22px);
+    margin-bottom: $gutter * 2;
+  }
+  
+  h3.no-content {
+    color: $colorTextBlackSix;
   }
 }
 
@@ -2740,7 +2754,7 @@ video {
     }
     
     @include at-query ($min, $largehd) {
-      max-width: 78vw;
+      max-width: 44vw;
     }
   
     iframe {
@@ -3746,4 +3760,43 @@ html[xmlns] .slides {display: block;}
   .use-active {
     opacity: 1; cursor: default;
   }
+}
+
+/*============================================================================
+  #Masonry
+==============================================================================*/
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+/* ---- isotope ---- */
+
+/* clear fix */
+.gridy:after {
+  content: '';
+  display: block !important;
+  clear: both !important;
+}
+
+/* ---- .grid-item ---- */
+
+.gridy-sizer,
+.gridy-item {
+  
+  @include at-query ($min, $medium) {
+    width: 25% !important;
+  }
+  
+  @include at-query ($min, $medium) {
+    width: 33.333% !important;
+  }
+}
+
+.gridy-item {
+  float: left !important;
+}
+
+.gridy-item img {
+  display: block !important;
+  max-width: 100%;
 }

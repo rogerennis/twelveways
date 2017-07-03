@@ -240,11 +240,11 @@
       },
       "weekend-video": {
         "title": "A Weekend with Twelveways",
-        "copy": "Enjoy light packing and maximize your styles, learn how"
+        "copy": "Enjoy light packing and maximize your styles"
       },
       "how-to-video": {
         "title": "How to Use your Twelveways",
-        "copy": "Quick instructions on how to achieve All 12 Style"
+        "copy": "Quick instructions on how to achieve all 12 styles"
       }
     },
     "onboarding": {
@@ -308,7 +308,7 @@
     }
   },
   "get_inspired": {
-    "category_title": "Choose the perfect occasion for you",
+    "subTitle": "Choose the perfect occasion for you",
     "categories": {
       "casual_business": "Casual / Business",
       "resort_travel": "Resort / Travel",
@@ -316,6 +316,10 @@
       "holiday": "Holiday",
       "fitness": "Fitness",
       "maternity": "Maternity"
+    },
+    "categoryPage": {
+      "subTitle": "Get inspired with styles that are all your own",
+      "noImagesYet": "Sorry, we'll be adding inspiration for you very soon!"
     }
   },
   "password_page": {

@@ -29,9 +29,9 @@
 
   <!-- CSS ================================================== -->
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
-<!--   {{ 'flexslider.scss.css' | asset_url | stylesheet_tag }} -->
+  {{ '//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.css' | stylesheet_tag }}
 <!--   {{ 'flexslider-use.scss.css' | asset_url | stylesheet_tag }} -->
-  {{ 'flexslider-inspired.css' | asset_url | stylesheet_tag }}
+<!--   {{ 'flexslider-inspired.css' | asset_url | stylesheet_tag }} -->
   
   <!-- Google Web Font ========================================== -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800,900" rel="stylesheet">
@@ -541,6 +541,7 @@
       namespace: "use-"
     });
     
+/*
     $('.flexslider3').flexslider({
       animation: "slide",
       animationLoop: false,
@@ -548,10 +549,33 @@
       pausePlay: true,
       namespace: "inspired-"
     });
+*/
   });
   </script>
   {{ 'jquery.flexslider-min.js' | asset_url | script_tag }}
   
+  
+  <!-- Masonry ================================================== -->
+  <script>
+  $(document).ready( function() {
+    // init Isotope
+    var $gridy = $('.gridy').imagesLoaded( function() {
+      // init Masonry after all images have loaded
+      $gridy.masonry({
+        itemSelector: '.gridy-item',
+	    columnWidth: '.gridy-sizer',
+	    percentPosition: true
+      });
+    });
+
+  });
+  </script>
+  {{ 'masonry.pkgd.min.js' | asset_url | script_tag }}
+  {{ 'imagesloaded.pkgd.js' | asset_url | script_tag }}
+  
+  
+  <!-- featherlight ================================================== -->
+  {{ '//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.js' | script_tag }}
   
   
   {% comment %}

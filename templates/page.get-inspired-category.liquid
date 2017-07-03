@@ -1,60 +1,599 @@
-<!-- /templates/get-inspired-categories.liquid -->
+<!-- /templates/get-inspired-category.liquid -->
 {% include 'breadcrumb' %}
 
 <section class="grid">
   
-  <div class="grid__item get-inspired-page-container">
+  <div class="grid__item get-inspired-category-container">
 
     <h1 itemprop="name">{{ page.title }}</h1>
-
-    {% include 'hero-video' %}
     
-    <h2>{{ 'get_inspired.category_title' | t }}</h2>
+    <p class="page-subtitle">{{ 'get_inspired.categoryPage.subTitle' | t }}</p>
     
-    <div class="grid">
-      <div class="category">
-         
-        <ul class="get-inspired__categories">
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="#" class="categories_casual-business">
-              <h3>{{ 'get_inspired.categories.casual_business' | t }}</h3>
-            </a>
-          </li>
+    
+    {% comment %}
+      Casual / Business category
+    {% endcomment %}
+    {% if page.handle == 'get-inspired-category-casual-business' %}
+      
+      {% if settings.getInspired_casualBusiness_enable %}
+        <div class="gridy">
+          <div class="gridy-sizer"></div>
           
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="#" class="categories_resort-hotel">
-              <h3>{{ 'get_inspired.categories.resort_travel' | t }}</h3>
+          {% if settings.casualBusiness_active_1 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_1.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_1.jpg' | asset_url }}" alt="{{ settings.casualBusiness_1_alt }}"/>
             </a>
-          </li>
+          </div>
+          {% endif %}
           
+          {% if settings.casualBusiness_active_2 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_2.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_2.jpg' | asset_url }}" alt="{{ settings.casualBusiness_2_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
           
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="#" class="categories_cocktail-evening">
-              <h3>{{ 'get_inspired.categories.cocktail_evening' | t }}</h3>
+          {% if settings.casualBusiness_active_3 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_3.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_3.jpg' | asset_url }}" alt="{{ settings.casualBusiness_3_alt }}"/>
             </a>
-          </li>
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="#" class="categories_holiday">
-              <h3>{{ 'get_inspired.categories.holiday' | t }}</h3>
-            </a>
-          </li>
+          </div>
+          {% endif %}
           
+          {% if settings.casualBusiness_active_4 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_4.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_4.jpg' | asset_url }}" alt="{{ settings.casualBusiness_4_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
           
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="#" class="categories_fitness">
-              <h3>{{ 'get_inspired.categories.fitness' | t }}</h3>
+          {% if settings.casualBusiness_active_5 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_5.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_5.jpg' | asset_url }}" alt="{{ settings.casualBusiness_5_alt }}"/>
             </a>
-          </li>
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="#" class="categories_maternity">
-              <h3>{{ 'get_inspired.categories.maternity' | t }}</h3>
+          </div>
+          {% endif %}
+          
+          {% if settings.casualBusiness_active_6 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_6.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_6.jpg' | asset_url }}" alt="{{ settings.casualBusiness_6_alt }}"/>
             </a>
-          </li>
-        </ul>
+          </div>
+          {% endif %}
+          
+          {% if settings.casualBusiness_active_7 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_7.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_7.jpg' | asset_url }}" alt="{{ settings.casualBusiness_7_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.casualBusiness_active_8 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_8.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_8.jpg' | asset_url }}" alt="{{ settings.casualBusiness_8_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.casualBusiness_active_9 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_9.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_9.jpg' | asset_url }}" alt="{{ settings.casualBusiness_9_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.casualBusiness_active_10 %}
+          <div class="gridy-item">
+            <a href="{{ 'casualBusiness_10.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'casualBusiness_10.jpg' | asset_url }}" alt="{{ settings.casualBusiness_10_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+        </div>
         
-      </div>
-    </div>
+        {% else %}
+        <h3 class="no-content">{{ 'get_inspired.categoryPage.noImagesYet' | t }}</h3>
+        
+      {% endif %}
+      
+    {% endif %}
     
+    
+    {% comment %}
+      Resort / Hotel category
+    {% endcomment %}
+    {% if page.handle == 'get-inspired-category-resort-hotel' %}
+      
+      {% if settings.getInspired_resortHotel_enable %}
+        <div class="gridy">
+          <div class="gridy-sizer"></div>
+          
+          {% if settings.resortHotel_active_1 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_1.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_1.jpg' | asset_url }}" alt="{{ settings.resortHotel_1_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.resortHotel_active_2 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_2.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_2.jpg' | asset_url }}" alt="{{ settings.resortHotel_2_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.casualBusiness_active_3 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_3.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_3.jpg' | asset_url }}" alt="{{ settings.resortHotel_3_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.resortHotel_active_4 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_4.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_4.jpg' | asset_url }}" alt="{{ settings.resortHotel_4_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.resortHotel_active_5 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_5.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_5.jpg' | asset_url }}" alt="{{ settings.resortHotel_5_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.resortHotel_active_6 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_6.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_6.jpg' | asset_url }}" alt="{{ settings.resortHotel_6_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.resortHotel_active_7 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_7.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_7.jpg' | asset_url }}" alt="{{ settings.resortHotel_7_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.resortHotel_active_8 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_8.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_8.jpg' | asset_url }}" alt="{{ settings.resortHotel_8_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.resortHotel_active_9 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_9.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_9.jpg' | asset_url }}" alt="{{ settings.resortHotel_9_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.resortHotel_active_10 %}
+          <div class="gridy-item">
+            <a href="{{ 'resortHotel_10.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'resortHotel_10.jpg' | asset_url }}" alt="{{ settings.resortHotel_10_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      
+      {% else %}
+      <h3 class="no-content">{{ 'get_inspired.categoryPage.noImagesYet' | t }}</h3>
+      
+      {% endif %}
+      
+    {% endif %}
+    
+    
+    {% comment %}
+      Cocktail Evening category
+    {% endcomment %}
+    {% if page.handle == 'get-inspired-category-cocktail-evening' %}
+      
+      {% if settings.getInspired_cocktailEvening_enable %}
+        <div class="gridy">
+          <div class="gridy-sizer"></div>
+          
+          {% if settings.cocktailEvening_active_1 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_1.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_1.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_1_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.cocktailEvening_active_2 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_2.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_2.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_2_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.cocktailEvening_active_3 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_3.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_3.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_3_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.cocktailEvening_active_4 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_4.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_4.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_4_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.cocktailEvening_active_5 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_5.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_5.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_5_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.cocktailEvening_active_6 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_6.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_6.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_6_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.cocktailEvening_active_7 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_7.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_7.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_7_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.cocktailEvening_active_8 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_8.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_8.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_8_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.cocktailEvening_active_9 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_9.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_9.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_9_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.cocktailEvening_active_10 %}
+          <div class="gridy-item">
+            <a href="{{ 'cocktailEvening_10.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'cocktailEvening_10.jpg' | asset_url }}" alt="{{ settings.cocktailEvening_10_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+        
+        {% else %}
+        <h3 class="no-content">{{ 'get_inspired.categoryPage.noImagesYet' | t }}</h3>
+        
+      {% endif %}
+      
+    {% endif %}
+    
+    
+    {% comment %}
+      Holiday category
+    {% endcomment %}
+    {% if page.handle == 'get-inspired-category-holiday' %}
+      
+      {% if settings.getInspired_holiday_enable %}
+        <div class="gridy">
+          <div class="gridy-sizer"></div>
+          
+          {% if settings.holiday_active_1 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_1.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_1.jpg' | asset_url }}" alt="{{ settings.holiday_1_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.holiday_active_2 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_2.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_2.jpg' | asset_url }}" alt="{{ settings.holiday_2_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.holiday_active_3 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_3.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_3.jpg' | asset_url }}" alt="{{ settings.holiday_3_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.holiday_active_4 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_4.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_4.jpg' | asset_url }}" alt="{{ settings.holiday_4_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.holiday_active_5 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_5.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_5.jpg' | asset_url }}" alt="{{ settings.holiday_5_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.holiday_active_6 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_6.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_6.jpg' | asset_url }}" alt="{{ settings.holiday_6_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.holiday_active_7 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_7.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_7.jpg' | asset_url }}" alt="{{ settings.holiday_7_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.holiday_active_8 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_8.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_8.jpg' | asset_url }}" alt="{{ settings.holiday_8_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.holiday_active_9 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_9.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_9.jpg' | asset_url }}" alt="{{ settings.holiday_9_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.holiday_active_10 %}
+          <div class="gridy-item">
+            <a href="{{ 'holiday_10.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'holiday_10.jpg' | asset_url }}" alt="{{ settings.holiday_10_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+        
+        {% else %}
+        <h3 class="no-content">{{ 'get_inspired.categoryPage.noImagesYet' | t }}</h3>
+        
+      {% endif %}
+      
+    {% endif %}
+    
+    
+    {% comment %}
+      Fitness category
+    {% endcomment %}
+    {% if page.handle == 'get-inspired-category-fitness' %}
+      
+      {% if settings.getInspired_fitness_enable %}
+        <div class="gridy">
+          <div class="gridy-sizer"></div>
+          
+          {% if settings.fitness_active_1 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_1.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_1.jpg' | asset_url }}" alt="{{ settings.fitness_1_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.fitness_active_2 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_2.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_2.jpg' | asset_url }}" alt="{{ settings.fitness_2_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.fitness_active_3 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_3.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_3.jpg' | asset_url }}" alt="{{ settings.fitness_3_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.fitness_active_4 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_4.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_4.jpg' | asset_url }}" alt="{{ settings.fitness_4_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.fitness_active_5 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_5.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_5.jpg' | asset_url }}" alt="{{ settings.fitness_5_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.fitness_active_6 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_6.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_6.jpg' | asset_url }}" alt="{{ settings.fitness_6_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.fitness_active_7 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_7.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_7.jpg' | asset_url }}" alt="{{ settings.fitness_7_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.fitness_active_8 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_8.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_8.jpg' | asset_url }}" alt="{{ settings.fitness_8_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.fitness_active_9 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_9.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_9.jpg' | asset_url }}" alt="{{ settings.fitness_9_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.fitness_active_10 %}
+          <div class="gridy-item">
+            <a href="{{ 'fitness_10.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'fitness_10.jpg' | asset_url }}" alt="{{ settings.fitness_10_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+        
+        {% else %}
+        <h3 class="no-content">{{ 'get_inspired.categoryPage.noImagesYet' | t }}</h3>
+        
+      {% endif %}
+      
+    {% endif %}
+    
+    
+    {% comment %}
+      Maternity category
+    {% endcomment %}
+    {% if page.handle == 'get-inspired-category-maternity' %}
+      {% if settings.getInspired_maternity_enable %}
+        <div class="gridy">
+          <div class="gridy-sizer"></div>
+          
+          {% if settings.maternity_active_1 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_1.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_1.jpg' | asset_url }}" alt="{{ settings.maternity_1_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.maternity_active_2 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_2.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_2.jpg' | asset_url }}" alt="{{ settings.maternity_2_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.maternity_active_3 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_3.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_3.jpg' | asset_url }}" alt="{{ settings.maternity_3_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.maternity_active_4 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_4.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_4.jpg' | asset_url }}" alt="{{ settings.maternity_4_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.maternity_active_5 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_5.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_5.jpg' | asset_url }}" alt="{{ settings.maternity_5_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.maternity_active_6 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_6.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_6.jpg' | asset_url }}" alt="{{ settings.maternity_6_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.maternity_active_7 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_7.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_7.jpg' | asset_url }}" alt="{{ settings.maternity_7_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.maternity_active_8 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_8.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_8.jpg' | asset_url }}" alt="{{ settings.maternity_8_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.maternity_active_9 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_9.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_9.jpg' | asset_url }}" alt="{{ settings.maternity_9_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+          
+          {% if settings.maternity_active_10 %}
+          <div class="gridy-item">
+            <a href="{{ 'maternity_10.jpg' | asset_url }}" data-featherlight="image">
+              <img src="{{ 'maternity_10.jpg' | asset_url }}" alt="{{ settings.maternity_10_alt }}"/>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+        
+        {% else %}
+        <h3 class="no-content">{{ 'get_inspired.categoryPage.noImagesYet' | t }}</h3>
+        
+      {% endif %}
+    {% endif %}
   </div>
   
 </section>
