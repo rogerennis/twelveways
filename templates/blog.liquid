@@ -35,7 +35,7 @@
 
       <div class="article">
 
-        <h2 class="h3"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+        <h2 class="h2"><a href="{{ article.url }}">{{ article.title }}</a></h2>
         {% capture author %}<strong>{{ article.author }}</strong>{% endcapture %}
         {% capture date %}<time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>{% endcapture %}
         <p>{{ 'blogs.article.author_on_date_html' | t: author: author, date: date }}</p>
@@ -57,6 +57,10 @@
             <p>{{ article.content | strip_html | truncatewords: 100 }}</p>
           {% endif %}
         </div>
+        
+        <p><a href="{{ article.url }}">{{ 'blogs.article.read_more' | t }} &rarr;</a></p>
+        
+        <hr>
 
         {% comment %}
           Show off meta information like number of comments and tags.
@@ -73,7 +77,7 @@
           {% include 'tags-article' %}
         </ul>
 
-        <p><a href="{{ article.url }}">{{ 'blogs.article.read_more' | t }} &rarr;</a></p>
+        
 
       </div>
 

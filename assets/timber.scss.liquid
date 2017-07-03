@@ -832,7 +832,20 @@ button {
   -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  display: block;
+  font-family: $headerFontStack;
+  font-weight: $headerFontWeight;
+  margin: 0 0 1.5em;
+  line-height: 1.4;
+
+  a {
+    text-decoration: none;
+    font-weight: inherit;
+  }
+}
+
+h2, h3, h4, h5, h6 {
   display: block;
   font-family: $headerFontStack;
   font-weight: $headerFontWeight;

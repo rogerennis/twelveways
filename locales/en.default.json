@@ -27,7 +27,7 @@
   },
   "blogs": {
     "article": {
-      "author_on_date_html": "Posted by {{ author }} on {{ date }}",
+      "author_on_date_html": "{{ date }}", // Posted by {{ author }} on {{ date }}
       "older_post": "Older Post",
       "newer_post": "Newer Post",
       "tags": "Tags",
