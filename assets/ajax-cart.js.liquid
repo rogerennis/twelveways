@@ -292,7 +292,7 @@ var ajaxCart = (function(module, $) {
         .append('<a href="/collections/all" class="btn btn--full text-upper">' + {{ 'cart.general.empty_shop_btn' | t | json }} + '</a>' + '<br><br><br><br>')
         .append('<p class="text-center text-upper">' + {{ 'cart.general.empty_or' | t | json }} + '</p>' + '<br><br>')
         .append('<p>' + {{ 'cart.general.empty_get_inspired' | t | json }} + '</p>')
-        .append('<a href="/collections/all}" class="btn btn--full text-upper">' + {{ 'cart.general.empty_get_inspired_btn' | t | json }} + '</a>');
+        .append('<a href="/pages/get-inspired" class="btn btn--full text-upper">' + {{ 'cart.general.empty_get_inspired_btn' | t | json }} + '</a>');
       cartCallback(cart);
       return;
     }
