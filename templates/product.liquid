@@ -125,15 +125,15 @@
       		<li><a href="#tab-3">Shipping</a></li>
     		</ul>
   		
-        <div id="tab-1">
+        <div id="tab-1" itemprop="description">
   			  {{ product.description }}
   		  </div>
   		
-        <div id="tab-2">
+        <div id="tab-2" itemprop="sizing">
           {% include 'sizing' %}
   		  </div>
         
-        <div id="tab-3">
+        <div id="tab-3" itemprop="shipping">
           	{% include 'shipping' %}
         </div>
       </div>
