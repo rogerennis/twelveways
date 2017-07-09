@@ -507,11 +507,6 @@
         "id": "get_inspired_image_title",
         "label": "BRIEFLY, Describe your image",
         "info": "5 women wearing twelveways on vacation"
-      },
-      {
-        "type": "text",
-        "id": "get_inspired_link",
-        "label": "Link to something / somewhere"
       }
     ]
   },

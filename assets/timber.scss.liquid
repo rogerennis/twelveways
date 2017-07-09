@@ -1434,7 +1434,7 @@ form {
 }
 
 .form-vertical {
-  margin-bottom: $gutter + 10;
+  margin-bottom: $gutter * 2;
 }
 
 /*================ Prevent zoom on touch devices in active inputs ================*/
@@ -2313,6 +2313,10 @@ label.error {
 .rtbs {
   margin-bottom: $gutter * 1.5;
   
+  @include at-query($min, $large) {
+    margin-top: $gutter * 2;
+  }
+  
   h3 {
     font-size: em(22px);
     font-weight: 400;
@@ -2322,6 +2326,10 @@ label.error {
     border-bottom: 2px solid $colorBorder;
     width: 30%;
     margin: ($gutter) auto;
+    
+    @include at-query($min, $large) {
+      margin: ($gutter * 2) auto;
+    }
   }
 }
 
@@ -2353,63 +2361,92 @@ label.error {
 }
 
 .get-inspired-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
   margin-bottom: $gutter * 2;
   
-  .get-inspired-section {    
-    .get-inspired-section--message {
-      background-color: {{ settings.get_inspired_color }};
-      padding: $gutter + 10;
-      
-      @include at-query ($min, $medium) {
-        padding: ($gutter * 2.5) ($gutter * 7) ($gutter * 3) ($gutter + 40);
-      }
-      
-      @include at-query ($min, $large) {
-        padding: ($gutter * 1.8) ($gutter * 7) ($gutter * 1.8 + 3) ($gutter + 40);
-      }
-      
-       @include at-query ($min, $large + 255) {
-        padding: ($gutter * 2.5) ($gutter * 2) ($gutter * 2.2) ($gutter + 15);
-      }
-      
-      h2 {
-        color: $colorNavText;
-      }
-      
-      a {
-        color: $colorNavText;
-        text-decoration: underline;
-        
-        &:hover {
-          text-decoration: none;
-          color: $colorLinkHover;
-        }
-      }
+  @include at-query ($min, $large) {
+    flex-direction: row;
+  -webkit-flex-direction: row;
+  }
+  
+  .get-inspired-section--message {
+    flex: 0 0 14rem;
+    -webkit-flex: 0 0 14rem;
+    background-color: {{ settings.get_inspired_color }};
+    padding: ($gutter + 10) ($gutter + 10) ($gutter + 20) ($gutter + 10);;
+    
+    @include at-query ($min, $medium) {
+      padding: ($gutter * 3) ($gutter * 7) 0 ($gutter + 40);
+      height: 30vh;
     }
     
-    .get-inspired-section--image {
+    @include at-query ($min, $large) {
+      padding: ($gutter * 2.5) ($gutter * 3) ($gutter * 1.8 + 3) ($gutter + 40);
+      height: 40vh;
+    }
+    
+     @include at-query ($min, $largehd) {
+      padding: ($gutter * 3) ($gutter * 2) ($gutter * 2.2) ($gutter + 15);
+      height: 27vh;
+    }
+    
+    h2 {
+      color: $colorNavText;
+    }
+    
+    a {
+      color: $colorNavText;
+      text-decoration: underline;
+      
+      &:hover {
+        text-decoration: none;
+        color: $colorLinkHover;
+      }
+    }
+  }
+  
+  .get-inspired-section--image {
+    flex: 0 0 14rem;
+    -webkit-flex: 0 0 14rem;
+      
+    .section-image {
       background: url('{{ "get_inspired_section_phone.jpg" | asset_url }}');
       background-repeat:no-repeat;
+      background-size: cover;
       height: 35vh;
-      background-size: 100%;
       
       @include at-query ($min, $medium) {
         background: url('{{ "get_inspired_section_tablet.jpg" | asset_url }}');
         background-repeat:no-repeat;
-        height: 40vh;
-        background-size: 100%;
+        background-size: cover;
+        height: 30vh;
       }
       
       @include at-query ($min, $large) {
         background: url('{{ "get_inspired_section_desktop.jpg" | asset_url }}');
         background-repeat:no-repeat;
-        height: 35vh;
-        background-size: 100%;
+        background-size: cover;
+        height: 40vh;
+      }
+      
+      @include at-query ($min, $large) {
+        background: url('{{ "get_inspired_section_desktop.jpg" | asset_url }}');
+        background-repeat:no-repeat;
+        background-size: cover;
+        height: 27vh;
+      }
+      
+      &:hover {
+        
       }
     }
   }
 }
-
 
 .weekend-video-section {
   margin-bottom: $gutter * 2;
@@ -2593,6 +2630,134 @@ form {
       -webkit-flex: 0 1 8rem;
     }
   }
+}
+
+/*============================================================================
+  #Product Tabs
+==============================================================================*/
+
+ul.tabs {
+  border-bottom: 1px solid #DDDDDD;
+  display: block;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+ul.tabs li {
+  display: block;
+  float: left;
+  height: 30px;
+  margin-bottom: 0;
+  padding: 0;
+  width: auto;
+}
+
+ul.tabs li a {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat scroll 0 0 $colorBorder;
+  border-color: $colorBorder !important;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  display: block;
+  font-size: em(16px);
+  font-weight: 700;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0 20px;
+  text-decoration: none;
+  width: auto;
+  color: #303030;
+  border-bottom:none !important;
+}
+
+ul.tabs li a.active {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: $colorBorder !important;
+  border-left-width: 1px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  color: #111111;
+  height: 35px;
+  margin: 0 0 0 -1px;
+  padding-top: 4px;
+  position: relative;
+  top: -4px;
+}
+
+ul.tabs li:first-child a.active {
+  margin-left: 0;
+}
+
+ul.tabs li:first-child a {
+  border-top-left-radius: 2px;
+  border-width: 1px 1px 0;
+}
+
+ul.tabs li:last-child a {
+  border-top-right-radius: 2px;
+}
+
+ul.tabs:before, ul.tabs:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+
+ul.tabs:after {
+  clear: both;
+}
+    
+    
+/*============================================================================
+  #Sizing Chart
+==============================================================================*/
+
+.tableContainer {
+  background: #fff;
+  
+  #tableHolder {
+    border: 0px solid #444;
+  
+    tr td {
+      border: 0;
+      padding-left: 5px;
+    }
+  
+  #tableContent {
+    width: 100%;
+    
+    tr td, tr th {
+      border: 0;
+    }
+  }
+  
+  }
+}
+  
+td.tableHead {
+  background: #eee !important;
+  border-radius: 0 !important;
+}
+  
+td.tableRow {
+  border-bottom: 1px solid #444 !important;
+  border-radius: 0 !important;
+}
+  
+td.tableRowLast {
+  border-radius: 0 !important;
+}
+ 
+tr.tableHighlight:hover {
+  background: #fafafa !important;
 }
 
 /*============================================================================
@@ -3407,15 +3572,21 @@ html[xmlns] .slides {display: block;}
           width: 100%;
           background: url('{{ "slider_1_phone.jpg" | asset_url }}') no-repeat 0 0;
           height: 340px;
-          background-size: contain;
+          background-size: cover;
           
           @include at-query($min, $medium) {
             background: url('{{ "slider_1_tablet.jpg" | asset_url }}') no-repeat 0 0;
             height: 440px;
-            background-size: contain;
+            background-size: cover;
           }
           
           @include at-query($min, $large) {
+            background: url('{{ "slider_1_desktop.jpg" | asset_url }}') no-repeat 0 0;
+            height: 540px;
+            background-size: cover;
+          }
+          
+          @include at-query($min, $largehd) {
             background: url('{{ "slider_1_desktop.jpg" | asset_url }}') no-repeat 0 0;
             height: 540px;
             background-size: contain;
@@ -3426,15 +3597,21 @@ html[xmlns] .slides {display: block;}
           width: 100%;
           background: url('{{ "slider_2_phone.jpg" | asset_url }}') no-repeat 0 0;
           height: 340px;
-          background-size: contain;
+          background-size: cover;
           
           @include at-query($min, $medium) {
             background: url('{{ "slider_2_tablet.jpg" | asset_url }}') no-repeat 0 0;
             height: 440px;
-            background-size: contain;
+            background-size: cover;
           }
           
           @include at-query($min, $large) {
+            background: url('{{ "slider_2_desktop.jpg" | asset_url }}') no-repeat 0 0;
+            height: 540px;
+            background-size: cover;
+          }
+          
+          @include at-query($min, $largehd) {
             background: url('{{ "slider_2_desktop.jpg" | asset_url }}') no-repeat 0 0;
             height: 540px;
             background-size: contain;
@@ -3445,15 +3622,21 @@ html[xmlns] .slides {display: block;}
           width: 100%;
           background: url('{{ "slider_3_phone.jpg" | asset_url }}') no-repeat 0 0;
           height: 340px;
-          background-size: contain;
+          background-size: cover;
           
           @include at-query($min, $medium) {
             background: url('{{ "slider_3_tablet.jpg" | asset_url }}') no-repeat 0 0;
             height: 440px;
-            background-size: contain;
+            background-size: cover;
           }
           
           @include at-query($min, $large) {
+            background: url('{{ "slider_3_desktop.jpg" | asset_url }}') no-repeat 0 0;
+            height: 540px;
+            background-size: cover;
+          }
+          
+          @include at-query($min, $largehd) {
             background: url('{{ "slider_3_desktop.jpg" | asset_url }}') no-repeat 0 0;
             height: 540px;
             background-size: contain;
@@ -3554,7 +3737,7 @@ html[xmlns] .slides {display: block;}
       display: block;
       
       @include at-query($min, $large) {
-        bottom: 24px;
+        bottom: 3px;
       }
       
       li {
@@ -3589,7 +3772,7 @@ html[xmlns] .slides {display: block;}
           width: $gutter / 2;
           height: $gutter / 2;
           display: block;
-          background: $colorBorder;
+          background: $colorTextBlackSix;
           cursor: pointer;
           text-indent: -9999px;
           -webkit-border-radius: 20px;
@@ -3636,6 +3819,10 @@ html[xmlns] .slides {display: block;}
         -webkit-transition: all .3s ease;
         -moz-transition: all .3s ease;
         transition: all .3s ease;
+        
+        @include at-query ($min, $large) {
+          height: $gutter + 2;
+        }
         
         &.flex-prev,
         &.use-prev {
@@ -3731,7 +3918,7 @@ html[xmlns] .slides {display: block;}
       height: 22px;
       position: absolute;
       bottom: 10px;
-      left: 32%;
+      left: 63%;
       opacity: 1;
       z-index: 10;
       overflow: hidden;
@@ -3739,12 +3926,17 @@ html[xmlns] .slides {display: block;}
       color: $colorBody;
       
       @include at-query($min, $medium) {
-        left: 41%;
+        left: 57%;
       }
       
       @include at-query($min, $large) {
-        left: 45%;
-        bottom: 35px; 
+        left: 55%;
+        bottom: 15px; 
+      }
+      
+      @include at-query($min, $largehd) {
+        left: 53%;
+        bottom: 15px; 
       }
       
       &:before {

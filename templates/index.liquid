@@ -9,22 +9,22 @@
  
 <section class="grid-uniform rtbs">
   
-  <div class="grid__item text-center">
+  <div class="grid__item large--one-quarter text-center">
     <h3>{{ 'homepage.sections.rtb_one' | t }}</h3>
     <div class="rtb-separators"></div>
   </div>
   
-  <div class="grid__item text-center">
+  <div class="grid__item large--one-quarter text-center">
     <h3>{{ 'homepage.sections.rtb_two' | t }}</h3>
     <div class="rtb-separators"></div>
   </div>
   
-  <div class="grid__item text-center">
+  <div class="grid__item large--one-quarter text-center">
     <h3>{{ 'homepage.sections.rtb_three' | t }}</h3>
     <div class="rtb-separators"></div>
   </div>
   
-  <div class="grid__item text-center">
+  <div class="grid__item large--one-quarter text-center">
     <h3>{{ 'homepage.sections.rtb_four' | t }}</h3>
     <div class="rtb-separators"></div>
   </div>
@@ -57,16 +57,16 @@
 
 <section class="grid--full get-inspired-container">
   
-  <div class="grid__item large--one-half get-inspired-section">
+  <div class="grid__item large--one-half">
     <div class="get-inspired-section--message">
       <h2>{{ 'homepage.sections.get-inspired.title' | t }}</h2>
-      <a href="{{ settings.get_inspired_link }}">{{ 'homepage.sections.get-inspired.cta' | t }}</a>
-      </div>
+      <a href="/pages/get-inspired">{{ 'homepage.sections.get-inspired.cta' | t }}</a>
+    </div>
   </div>
   
-  <div class="grid__item large--one-half get-inspired-section">
-    <a href="{{ settings.get_inspired_link }}">
-      <div class="get-inspired-section--image" title="{{ settings.get_inspired_image_title | escape }}"></div>
+  <div class="grid__item large--one-half">
+    <a href="/pages/get-inspired" class="get-inspired-section--image">
+      <div class="section-image" title="{{ settings.get_inspired_image_title | escape }}"></div>
     </a>
   </div>
 </section>

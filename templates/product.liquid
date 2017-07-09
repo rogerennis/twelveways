@@ -114,10 +114,35 @@
         </form>
 
       </div>
-
+      
+      {% comment %}
+        Product Tabs JS is in the theme page
+      {% endcomment %}
+      <div>
+    		<ul class="tabs">
+      		<li><a href="#tab-1">Info</a></li>
+      		<li><a href="#tab-2">Sizing</a></li>
+      		<li><a href="#tab-3">Shipping</a></li>
+    		</ul>
+  		
+        <div id="tab-1">
+  			  {{ product.description }}
+  		  </div>
+  		
+        <div id="tab-2">
+          {% include 'sizing' %}
+  		  </div>
+        
+        <div id="tab-3">
+          	{% include 'shipping' %}
+        </div>
+      </div>
+      
+      {% comment %}
       <div class="product-description rte" itemprop="description">
         {{ product.description }}
       </div>
+      {% endcomment %}
 
       {% comment %}
         If the user is on a collection product page (ie with /collections/collection-handle/products/product-handle)
