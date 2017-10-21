@@ -37,6 +37,13 @@
       },
       {
         "type": "color",
+        "id": "color_header_bg",
+        "label": "Header Nav",
+        "default": "#434343",
+        "info": "Used for text links, and primary buttons"
+      },
+      {
+        "type": "color",
         "id": "color_secondary",
         "label": "Secondary",
         "default": "#9296a9",

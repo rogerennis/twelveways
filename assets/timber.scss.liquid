@@ -112,7 +112,7 @@ $colorBody: {{ settings.color_body_bg }};
 $colorBorder: {{ settings.color_borders }};
 
 // Nav and dropdown link background
-$colorNavBG: #434343;
+$colorNavBG: {{ settings.color_header_bg }};
 $colorNav: #f2f2f2;
 $colorNavText: #fff;
 
@@ -135,6 +135,7 @@ $successGreenBg: #ecfef0;
 $drawerNavWidth: 300px;
 $drawerCartWidth: 300px;
 $colorDrawers: #F5F5F5;
+$colorDrawers_secondary: #434343;
 $colorDrawerBorder: darken($colorDrawers, 5%);
 $colorDrawerText: #434343;
 $drawerTransition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
@@ -1252,6 +1253,10 @@ ol.alpha { list-style: lower-alpha outside; }
 .no-bullets {
   list-style: none outside;
   margin-left: 0;
+  
+  .date {
+    color: $colorTextBlackSix;
+  }
 }
 
 .inline-list {
@@ -1503,7 +1508,7 @@ select {
   border-radius: $radius;
 
   &:focus {
-    border: 1px solid darken($colorBorder, 80%);
+    border: 1px solid $colorPrimary;
   }
 
   &[disabled],
@@ -1867,7 +1872,7 @@ label.error {
   text-align: center;
   margin: 0 auto;
   max-width: 100%;
-  line-height: 1.2;
+  line-height: 0.8;
 
   @include at-query ($min, $large) {
     text-align: left;
@@ -1957,6 +1962,15 @@ label.error {
   li {
     margin: 0;
     display: block;
+    
+    .site-nav__link {
+    
+      &:hover,
+      &:active,
+      &:focus {
+        color: $colorPrimaryBlack;
+      }
+    }
   }
   
   li:last-of-type {
@@ -1991,7 +2005,7 @@ label.error {
   &:hover,
   &:active,
   &:focus {
-    color: $colorPrimaryBlack;
+    color: $colorPrimary;
   }
 
   .icon-arrow-down {
@@ -2002,7 +2016,7 @@ label.error {
   }
 
   .site-nav--active > & {
-    font-weight: 700;
+    font-weight: 500;
     color: $colorPrimaryBlack;
   }
 
@@ -2068,7 +2082,7 @@ label.error {
   // Background color on top level items so there is no
   // element overlap on subnav's CSS toggle animation
   .mobile-nav > & {
-    background-color: $colorDrawers;
+    background-color: $colorDrawers_secondary; /* $colorDrawers; */
   }
 
   &:after {
@@ -2077,7 +2091,7 @@ label.error {
     bottom: 0;
     left: $gutter / 2;
     right: $gutter / 2;
-    border-bottom: 1px solid $colorDrawerBorder;
+    border-bottom: 1px solid $colorTextBlackTwo; /* $colorDrawerBorder; */
   }
 
   .mobile-nav > &:last-child:after {
@@ -2110,7 +2124,7 @@ label.error {
 
 .mobile-nav__item a,
 .mobile-nav__toggle button {
-  color: $colorDrawerText;
+  color: #fff; /* $colorDrawerText; */
   padding: $gutter / 2;
   text-decoration: none;
 
@@ -2205,8 +2219,8 @@ label.error {
   padding: 0 ($gutter / 2) ($gutter / 2);
   max-width: 95%;
   z-index: $zindexDrawer;
-  color: $colorDrawerText;
-  background-color: $colorDrawers;
+  color: #fff; /* $colorDrawerText; */
+  background-color: $colorDrawers_secondary; /*$colorDrawers;*/
   transition: $drawerTransition;
 
   a {
@@ -2311,14 +2325,23 @@ label.error {
   #Site Homepage
 ==============================================================================*/
 .rtbs {
-  margin-bottom: $gutter * 1.5;
+  margin-bottom: $gutter * 2.5;
   
   @include at-query($min, $large) {
     margin-top: $gutter * 2;
+    margin-bottom: $gutter * 3;
+  }
+  
+  .rtb-icons {
+    background: $colorDrawers;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto $gutter;
+    border-radius: 50rem;
   }
   
   h3 {
-    font-size: em(22px);
+    font-size: em(20px);
     font-weight: 400;
   }
   
@@ -2330,15 +2353,6 @@ label.error {
     @include at-query($min, $large) {
       margin: ($gutter * 2) auto;
     }
-  }
-}
-
-.rtbs-made {
-  margin-bottom: $gutter * 2.55;
-  
-  small {
-    color: $colorTextBlackSix;
-    font-weight: 500;
   }
 }
 
@@ -2355,7 +2369,13 @@ label.error {
   
   @include at-query ($min, $large) {
     background: url('{{ "twelve_ways_desktop.jpg" | asset_url }}') no-repeat 0 0;
-    height: 32vh;
+    height: 22rem;
+    background-size: 100%;
+  }
+  
+  @include at-query ($min, $largehd) {
+    background: url('{{ "twelve_ways_desktop.jpg" | asset_url }}') no-repeat 0 0;
+    height: 25rem;
     background-size: 100%;
   }
 }
@@ -2382,21 +2402,25 @@ label.error {
     
     @include at-query ($min, $medium) {
       padding: ($gutter * 3) ($gutter * 7) 0 ($gutter + 40);
-      height: 30vh;
+      height: 23rem;
     }
     
     @include at-query ($min, $large) {
-      padding: ($gutter * 2.5) ($gutter * 3) ($gutter * 1.8 + 3) ($gutter + 40);
-      height: 40vh;
+      padding: ($gutter * 1.5) ($gutter * 3) ($gutter * 1.8 + 3) ($gutter + 40);
+      height: 25rem;
     }
     
      @include at-query ($min, $largehd) {
       padding: ($gutter * 3) ($gutter * 2) ($gutter * 2.2) ($gutter + 15);
-      height: 27vh;
+      height: 22rem;
     }
     
     h2 {
       color: $colorNavText;
+      
+      @include at-query ($min, $medium) {
+        font-size: em(40px);
+      }
     }
     
     a {
@@ -2424,21 +2448,21 @@ label.error {
         background: url('{{ "get_inspired_section_tablet.jpg" | asset_url }}');
         background-repeat:no-repeat;
         background-size: cover;
-        height: 30vh;
+        height: 23rem;
       }
       
       @include at-query ($min, $large) {
         background: url('{{ "get_inspired_section_desktop.jpg" | asset_url }}');
         background-repeat:no-repeat;
         background-size: cover;
-        height: 40vh;
+        height: 25rem;
       }
       
-      @include at-query ($min, $large) {
+      @include at-query ($min, $largehd) {
         background: url('{{ "get_inspired_section_desktop.jpg" | asset_url }}');
         background-repeat:no-repeat;
         background-size: cover;
-        height: 27vh;
+        height: 22rem;
       }
       
       &:hover {
@@ -2484,7 +2508,7 @@ label.error {
   margin: 0 0 ($gutter) 0;
   
   li a {
-    color: #fff;
+    color: $colorNavText;
     
     &:hover {
       color: $colorPrimary;
@@ -2506,7 +2530,12 @@ label.error {
   img {
     display: block;
     margin: 0 auto;
+    
+    &.image {
+      margin: 0;
+    }
   }
+  
 }
 
 .complete-product {
@@ -2658,7 +2687,7 @@ ul.tabs li a {
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
-  background: none repeat scroll 0 0 $colorBorder;
+  background: none repeat scroll 0 0 $colorPrimaryBlack;
   border-color: $colorBorder !important;
   border-style: solid;
   border-width: 1px 1px 0 1px;
@@ -2671,7 +2700,7 @@ ul.tabs li a {
   padding: 0 20px;
   text-decoration: none;
   width: auto;
-  color: #303030;
+  color: $colorNavText;
   border-bottom:none !important;
 }
 
@@ -2681,7 +2710,7 @@ ul.tabs li a.active {
   border-left-width: 1px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  color: #111111;
+  color: $colorPrimary;
   height: 35px;
   margin: 0 0 0 -1px;
   padding-top: 4px;
@@ -2774,7 +2803,7 @@ tr.tableHighlight:hover {
     list-style: none;
     margin: 0;
     
-    &.get-inspired__categories {
+    &.get-inspired--categories {
       
       li {
         margin-bottom: $gutter;
@@ -2790,48 +2819,174 @@ tr.tableHighlight:hover {
         }
         
         a {
-          color: $colorPrimaryBlack;
-          background: #fff;
-          text-align: center;
-          border: 1px solid $colorBorder;
-          border-top: 4px solid $colorPrimary;
-          padding: ($gutter * 2) ($gutter * 3) ($gutter * 2);
-          display: block;
-          transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-          -o-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-          -ms-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-          -moz-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-          -webkit-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-          height: 200px;
-          
-          @include at-query ($min, 568px) {
-            padding-left: $gutter * 2.1;
-            padding-right: $gutter * 2.1;
-          }
-          
-          @include at-query ($min, $medium) {
-            padding-left: $gutter * 3.5;
-            padding-right: $gutter * 3.5;
-            height: 210px;
-          }
-          
-           @include at-query ($min, $large) {
-            height: 180px;
-          }
-          
-          h3 {
+          &.categories--casual-business-link,
+          &.categories--resort-hotel-link,
+          &.categories--cocktail-evening-link,
+          &.categories--holiday-link,
+          &.categories--fitness-link {
+            color: $colorPrimaryBlack;
+            background: #fff;
+            text-align: center;
+            border: 1px solid $colorBorder;
+            border-top: 4px solid $colorPrimary;
+            padding: ($gutter * 2) ($gutter * 3) ($gutter * 2);
+            display: block;
+            transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            -o-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            -ms-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            -moz-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            -webkit-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            height: 200px;
             
-          }
-          
-          &:hover {
-            color: #fff;
-            background: $colorPrimary;
-            border: 1px solid $colorPrimary;
-            padding-top: ($gutter * 2 + 3px);
-            transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-            -ms-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-            -moz-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-            -webkit-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            @include at-query ($min, 568px) {
+              padding-left: $gutter * 2.1;
+              padding-right: $gutter * 2.1;
+            }
+            
+            @include at-query ($min, $medium) {
+              padding-left: $gutter * 3.5;
+              padding-right: $gutter * 3.5;
+              height: 210px;
+            }
+            
+             @include at-query ($min, $large) {
+              height: 180px;
+            }
+            
+            .casual-business-bg {
+              background: url('{{ "casual_business_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+              
+              @include at-query($min, $medium) {
+                background: url('{{ "casual_business_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $large) {
+                background: url('{{ "casual_business_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $largehd) {
+                background: url('{{ "casual_business_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: contain;
+              }
+            }
+            
+            .resort-hotel-bg {
+              background: url('{{ "resort_hotel_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+              
+              @include at-query($min, $medium) {
+                background: url('{{ "resort_hotel_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $large) {
+                background: url('{{ "resort_hotel_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $largehd) {
+                background: url('{{ "resort_hotel_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: contain;
+              }
+            }
+            
+            .cocktail-evening-bg {
+              background: url('{{ "cocktail_evening_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+              
+              @include at-query($min, $medium) {
+                background: url('{{ "cocktail_evening_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $large) {
+                background: url('{{ "cocktail_evening_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $largehd) {
+                background: url('{{ "cocktail_evening_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: contain;
+              }
+            }
+            
+            .holiday-bg {
+              background: url('{{ "holiday_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+              
+              @include at-query($min, $medium) {
+                background: url('{{ "holiday_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $large) {
+                background: url('{{ "holiday_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $largehd) {
+                background: url('{{ "holiday_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: contain;
+              }
+            }
+            
+            .fitness-bg {
+              background: url('{{ "fitness_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+              
+              @include at-query($min, $medium) {
+                background: url('{{ "fitness_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $large) {
+                background: url('{{ "fitness_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $largehd) {
+                background: url('{{ "fitness_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: contain;
+              }
+            }
+            
+            .maternity-bg {
+              background: url('{{ "maternity_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+              
+              @include at-query($min, $medium) {
+                background: url('{{ "maternity_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $large) {
+                background: url('{{ "maternity_category_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: cover;
+              }
+              
+              @include at-query($min, $largehd) {
+                background: url('{{ "maternity_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+                background-size: contain;
+              }
+            }
+            
+            h3 {
+              
+            }
+            
+            &:hover {
+              color: #fff;
+              background: $colorPrimary;
+              border: 1px solid $colorPrimary;
+              padding-top: ($gutter * 2 + 3px);
+              transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+              -ms-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+              -moz-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+              -webkit-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            }
           }
         }
       }
@@ -2953,6 +3108,11 @@ video {
     
     @include at-query ($min, $largehd) {
       max-width: 44vw;
+    }
+    
+    @include at-query ($min, $largehd + 240) {
+//       max-width: 44vw;
+      max-width: 78vw;
     }
   
     iframe {
@@ -3363,6 +3523,18 @@ video {
 {% endif %} // settings.ajax_cart_method
 
 /*============================================================================
+  #Minor pages
+==============================================================================*/
+
+/*================ Shipping ================*/
+.shipping-section-header {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $colorPrimaryBlack;
+}
+
+/*============================================================================
   #Password Page
 ==============================================================================*/
 .password-page-html {
@@ -3672,15 +3844,21 @@ html[xmlns] .slides {display: block;}
         display: none;
         -webkit-backface-visibility: hidden; /* Hide the slides before the JS is loaded. Avoids image jumping */
         
+        img.how-to-use-sample__image {
+          width: $gutter * 3.3;
+          position: relative;
+          right: 70px;
+        }
+        
         .how-to-use {
           float: left;
           position: relative;
           
-          padding: $gutter ($gutter - 10) $gutter ($gutter * 4);
+          padding: ($gutter * 3) ($gutter - 10) $gutter ($gutter * 5.4);
           margin-top: -390px;
           
           @include at-query ($min, $medium) {
-            padding-left: 40%;
+            padding-left: 46%;
             padding-right: 25%;
           }
           
@@ -3691,22 +3869,6 @@ html[xmlns] .slides {display: block;}
           
           p {
             font-size: em(14px);
-          }
-          
-          img {
-            position: absolute;
-            margin: (-$gutter * 2) (-$gutter * 3.5) 0; 
-            width: 40%;
-            
-            @include at-query ($min, $medium) {
-              margin: (-$gutter / 2) (-$gutter * 4.5) 0;
-              width: 23%;
-            }
-            
-            @include at-query ($min, $large) {
-              margin: (-$gutter / 2) (-$gutter * 5) 0;
-              width: 15%;
-            }
           }
         }
       }
@@ -3738,6 +3900,10 @@ html[xmlns] .slides {display: block;}
       
       @include at-query($min, $large) {
         bottom: 3px;
+      }
+      
+      @include at-query($min, $largehd) {
+        bottom: 22px;
       }
       
       li {
@@ -3772,7 +3938,7 @@ html[xmlns] .slides {display: block;}
           width: $gutter / 2;
           height: $gutter / 2;
           display: block;
-          background: $colorTextBlackSix;
+          background: #fff;
           cursor: pointer;
           text-indent: -9999px;
           -webkit-border-radius: 20px;
@@ -3913,7 +4079,7 @@ html[xmlns] .slides {display: block;}
   .flex-pauseplay,
   .use-pauseplay {
     a { 
-      display: block;
+      display: none;
       width: 17px;
       height: 22px;
       position: absolute;
@@ -3935,8 +4101,8 @@ html[xmlns] .slides {display: block;}
       }
       
       @include at-query($min, $largehd) {
-        left: 53%;
-        bottom: 15px; 
+        left: 54%;
+        bottom: 34px; 
       }
       
       &:before {
