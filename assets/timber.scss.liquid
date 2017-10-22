@@ -2819,23 +2819,24 @@ tr.tableHighlight:hover {
         }
         
         a {
-          &.categories--casual-business-link,
-          &.categories--resort-hotel-link,
-          &.categories--cocktail-evening-link,
-          &.categories--holiday-link,
-          &.categories--fitness-link {
-            color: $colorPrimaryBlack;
+          &.categories--casual-business,
+          &.categories--resort-hotel,
+          &.categories--cocktail-evening,
+          &.categories--holiday,
+          &.categories--fitness,
+          &.categories--maternity {
+            color: #fff;
             background: #fff;
             text-align: center;
             border: 1px solid $colorBorder;
             border-top: 4px solid $colorPrimary;
             padding: ($gutter * 2) ($gutter * 3) ($gutter * 2);
             display: block;
-            transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-            -o-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-            -ms-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-            -moz-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-            -webkit-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.57);
+            -o-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.57);
+            -ms-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.57);
+            -moz-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.57);
+            -webkit-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.57);
             height: 200px;
             
             @include at-query ($min, 568px) {
@@ -2852,141 +2853,142 @@ tr.tableHighlight:hover {
              @include at-query ($min, $large) {
               height: 180px;
             }
+          }
+          
+          &.categories--casual-business {
+            background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "casual_business_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            background-size: cover;
             
-            .casual-business-bg {
-              background: url('{{ "casual_business_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            @include at-query($min, $medium) {
+              background: inear-gradient(to right, rgba(255, 255, 255, 0.65) 80%, rgba(255, 255, 255, 0.65) 80%), url('{{ "casual_business_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
               background-size: cover;
-              
-              @include at-query($min, $medium) {
-                background: url('{{ "casual_business_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $large) {
-                background: url('{{ "casual_business_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $largehd) {
-                background: url('{{ "casual_business_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: contain;
-              }
             }
             
-            .resort-hotel-bg {
-              background: url('{{ "resort_hotel_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            @include at-query($min, $large) {
+              background: inear-gradient(to right, rgba(255, 255, 255, 0.65) 80%, rgba(255, 255, 255, 0.65) 80%), url('{{ "casual_business_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
               background-size: cover;
-              
-              @include at-query($min, $medium) {
-                background: url('{{ "resort_hotel_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $large) {
-                background: url('{{ "resort_hotel_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $largehd) {
-                background: url('{{ "resort_hotel_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: contain;
-              }
             }
             
-            .cocktail-evening-bg {
-              background: url('{{ "cocktail_evening_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            @include at-query($min, $largehd) {
+              background: inear-gradient(to right, rgba(255, 255, 255, 0.65) 80%, rgba(255, 255, 255, 0.65) 80%), url('{{ "casual_business_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
               background-size: cover;
-              
-              @include at-query($min, $medium) {
-                background: url('{{ "cocktail_evening_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $large) {
-                background: url('{{ "cocktail_evening_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $largehd) {
-                background: url('{{ "cocktail_evening_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: contain;
-              }
             }
+          }
+          
+          &.categories--resort-hotel {
+            background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "resort_hotel_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            background-size: cover;
             
-            .holiday-bg {
-              background: url('{{ "holiday_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            @include at-query($min, $medium) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "resort_hotel_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
               background-size: cover;
-              
-              @include at-query($min, $medium) {
-                background: url('{{ "holiday_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $large) {
-                background: url('{{ "holiday_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $largehd) {
-                background: url('{{ "holiday_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: contain;
-              }
             }
             
-            .fitness-bg {
-              background: url('{{ "fitness_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            @include at-query($min, $large) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "resort_hotel_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
               background-size: cover;
-              
-              @include at-query($min, $medium) {
-                background: url('{{ "fitness_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $large) {
-                background: url('{{ "fitness_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $largehd) {
-                background: url('{{ "fitness_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: contain;
-              }
             }
             
-            .maternity-bg {
-              background: url('{{ "maternity_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            @include at-query($min, $largehd) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "resort_hotel_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
               background-size: cover;
-              
-              @include at-query($min, $medium) {
-                background: url('{{ "maternity_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $large) {
-                background: url('{{ "maternity_category_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: cover;
-              }
-              
-              @include at-query($min, $largehd) {
-                background: url('{{ "maternity_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
-                background-size: contain;
-              }
+            }
+          }
+          
+          &.categories--cocktail-evening {
+            background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "cocktail_evening_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            background-size: cover;
+            
+            @include at-query($min, $medium) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "cocktail_evening_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
             }
             
-            h3 {
-              
+            @include at-query($min, $large) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "cocktail_evening_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
             }
             
-            &:hover {
-              color: #fff;
-              background: $colorPrimary;
-              border: 1px solid $colorPrimary;
-              padding-top: ($gutter * 2 + 3px);
-              transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-              -ms-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-              -moz-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
-              -webkit-transition: 0.05s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+            @include at-query($min, $largehd) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "cocktail_evening_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
             }
+          }
+          
+          &.categories--holiday {
+            background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "holiday_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            background-size: cover;
+            
+            @include at-query($min, $medium) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "holiday_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+            }
+            
+            @include at-query($min, $large) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "holiday_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+            }
+            
+            @include at-query($min, $largehd) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "holiday_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+            }
+          }
+          
+          &.categories--fitness {
+            background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "fitness_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            background-size: cover;
+            
+            @include at-query($min, $medium) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%),url('{{ "fitness_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+            }
+            
+            @include at-query($min, $large) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "fitness_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+            }
+            
+            @include at-query($min, $largehd) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "fitness_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+            }
+          }
+          
+          &.categories--maternity {
+            background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "maternity_occasion_phone.jpg" | asset_url }}') no-repeat 0 0;
+            background-size: cover;
+            
+            @include at-query($min, $medium) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "maternity_occasion_tablet.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+            }
+            
+            @include at-query($min, $large) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "maternity_category_desktop.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+            }
+            
+            @include at-query($min, $largehd) {
+              background: linear-gradient(to right, rgba(74, 105, 114, 0.75) 80%, rgba(74, 105, 114, 0.75) 80%), url('{{ "maternity_occasion_desktop.jpg" | asset_url }}') no-repeat 0 0;
+              background-size: cover;
+            }
+          }
+          
+          h3 {
+            
+          }
+          
+          &:hover {
+            color: #fff;
+            background: $colorPrimary;
+            border: 1px solid $colorPrimary;
+            padding-top: ($gutter * 2 + 3px);
+            transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.55);
+            -o-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.55);
+            -ms-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.55);
+            -moz-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.55);
+            -webkit-transition: all 0.3s cubic-bezier(0.57, 0.06, 0.05, 0.55);
           }
         }
       }

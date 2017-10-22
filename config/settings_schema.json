@@ -979,7 +979,237 @@
     ]
   },
   {
-    "name": "Get Inspired - Casual / Business",
+    "name": "Get Inspired - Occasions",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Get Inspired Occasion Categories"
+      },
+      {
+        "type": "checkbox",
+        "id": "getInspired_occasionCategories_enable",
+        "label": "Turn on all occasion categories"
+      },
+      {
+        "type": "header",
+        "content": "Casual / Business"
+      },
+      {
+        "type": "checkbox",
+        "id": "casualBusinessOccasion_active",
+        "label": "Turn on casual / business image"
+      },
+      {
+        "type": "image",
+        "id": "casual_business_occasion_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 300,
+        "info": "300px wide x 200px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "casual_business_occasion_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 350,
+        "info": "350px wide x 210px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "casual_business_occasion_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 550,
+        "info": "550px wide x 180px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "casualBusinessOccasion_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Resort / Hotel"
+      },
+      {
+        "type": "checkbox",
+        "id": "resortHotelOccasion_active",
+        "label": "Turn on resort / hotel image"
+      },
+      {
+        "type": "image",
+        "id": "resort_hotel_occasion_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 300,
+        "info": "300px wide x 200px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "resort_hotel_occasion_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 350,
+        "info": "350px wide x 210px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "resort_hotel_occasion_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 550,
+        "info": "550px wide x 180px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "resortHotelOccasion_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Cocktail / Evening"
+      },
+      {
+        "type": "checkbox",
+        "id": "cocktailEveningOccasion_active",
+        "label": "Turn on cocktail / evening image"
+      },
+      {
+        "type": "image",
+        "id": "cocktail_evening_occasion_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 300,
+        "info": "300px wide x 200px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "cocktail_evening_occasion_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 350,
+        "info": "350px wide x 210px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "cocktail_evening_occasion_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 550,
+        "info": "550px wide x 180px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "cocktailEveningOccasion_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Hotel"
+      },
+      {
+        "type": "checkbox",
+        "id": "hotelOccasion_active",
+        "label": "Turn on hotel image"
+      },
+      {
+        "type": "image",
+        "id": "hotel_occasion_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 300,
+        "info": "300px wide x 200px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "hotel_occasion_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 350,
+        "info": "350px wide x 210px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "hotel_occasion_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 550,
+        "info": "550px wide x 180px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "hotelOccasion_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Fitness"
+      },
+      {
+        "type": "checkbox",
+        "id": "fitnessOccasion_active",
+        "label": "Turn on fitness image"
+      },
+      {
+        "type": "image",
+        "id": "fitness_occasion_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 300,
+        "info": "300px wide x 200px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "fitness_occasion_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 350,
+        "info": "350px wide x 210px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "fitness_occasion_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 550,
+        "info": "550px wide x 180px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "fitnessOccasion_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      },
+      {
+        "type": "header",
+        "content": "Maternity"
+      },
+      {
+        "type": "checkbox",
+        "id": "maternityOccasion_active",
+        "label": "Turn on maternity image"
+      },
+      {
+        "type": "image",
+        "id": "maternity_occasion_phone.jpg",
+        "label": "Upload phone image",
+        "max-width": 300,
+        "info": "300px wide x 200px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "maternity_occasion_tablet.jpg",
+        "label": "Upload tablet image",
+        "max-width": 350,
+        "info": "350px wide x 210px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "image",
+        "id": "maternity_occasion_desktop.jpg",
+        "label": "Upload desktop image",
+        "max-width": 550,
+        "info": "550px wide x 180px high .jpg hi-res at 72dpi required"
+      },
+      {
+        "type": "text",
+        "id": "maternityOccasion_alt",
+        "label": "BRIEFLY, Describe your image",
+        "info": "5 women wearing twelveways on vacation"
+      }
+    ]
+  },
+  {
+    "name": "Occasion - Casual / Business",
     "settings": [
       {
         "type": "header",
@@ -1213,7 +1443,7 @@
     ]
   },
   {
-    "name": "Get Inspired - Resort / Hotel",
+    "name": "Occasion - Resort / Hotel",
     "settings": [
       {
         "type": "header",
@@ -1447,7 +1677,7 @@
     ]
   },
   {
-    "name": "Get Inspired - Cocktail / Evening",
+    "name": "Occasion - Cocktail / Evening",
     "settings": [
       {
         "type": "header",
@@ -1681,7 +1911,7 @@
     ]
   },
   {
-    "name": "Get Inspired - Holiday",
+    "name": "Occasion - Holiday",
     "settings": [
       {
         "type": "header",
@@ -1915,7 +2145,7 @@
     ]
   },
   {
-    "name": "Get Inspired - Fitness",
+    "name": "Occasion - Fitness",
     "settings": [
       {
         "type": "header",
@@ -2149,7 +2379,7 @@
     ]
   },
   {
-    "name": "Get Inspired - Maternity",
+    "name": "Occasion - Maternity",
     "settings": [
       {
         "type": "header",

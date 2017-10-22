@@ -14,43 +14,58 @@
     <div class="grid">
       <div class="category">
          
-        <ul class="get-inspired__categories">
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="/pages/get-inspired-category-casual-business" class="categories_casual-business">
-              <h3>{{ 'get_inspired.categories.casual_business' | t }}</h3>
-            </a>
-          </li>
-          
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="/pages/get-inspired-category-resort-hotel" class="categories_resort-hotel">
-              <h3>{{ 'get_inspired.categories.resort_travel' | t }}</h3>
-            </a>
-          </li>
-          
-          
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="/pages/get-inspired-category-cocktail-evening" class="categories_cocktail-evening">
-              <h3>{{ 'get_inspired.categories.cocktail_evening' | t }}</h3>
-            </a>
-          </li>
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="/pages/get-inspired-category-holiday" class="categories_holiday">
-              <h3>{{ 'get_inspired.categories.holiday' | t }}</h3>
-            </a>
-          </li>
-          
-          
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="/pages/get-inspired-category-fitness" class="categories_fitness">
-              <h3>{{ 'get_inspired.categories.fitness' | t }}</h3>
-            </a>
-          </li>
-          <li class="grid__item medium--one-half large--one-half">
-            <a href="/pages/get-inspired-category-maternity" class="categories_maternity">
-              <h3>{{ 'get_inspired.categories.maternity' | t }}</h3>
-            </a>
-          </li>
-        </ul>
+        {% if settings.getInspired_occasionCategories_enable %}
+          <ul class="get-inspired--categories">
+            {% if settings.casualBusinessOccasion_active %}
+              <li class="grid__item medium--one-half large--one-half ">
+                <a href="/pages/get-inspired-category-casual-business" class="categories--casual-business">
+<!--                   <div class="categories--casual-business-bg"></div> -->
+                  <h3>{{ 'get_inspired.categories.casual_business' | t }}</h3>
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.resortHotelOccasion_active %}
+              <li class="grid__item medium--one-half large--one-half">
+                <a href="/pages/get-inspired-category-resort-hotel" class="categories--resort-hotel">
+<!--                   <div class="categories--resort-hotel-bg"></div> -->
+                  <h3>{{ 'get_inspired.categories.resort_travel' | t }}</h3>
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.cocktailEveningOccasion_active %}
+              <li class="grid__item medium--one-half large--one-half">
+                <a href="/pages/get-inspired-category-cocktail-evening" class="categories--cocktail-evening">
+<!--                   <div class="categories--cocktail-evening-bg"></div> -->
+                  <h3>{{ 'get_inspired.categories.cocktail_evening' | t }}</h3>
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.hotelOccasion_active %}
+              <li class="grid__item medium--one-half large--one-half">
+                <a href="/pages/get-inspired-category-holiday" class="categories--holiday">
+<!--                   <div class="categories--holiday-bg"></div> -->
+                  <h3>{{ 'get_inspired.categories.holiday' | t }}</h3>
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.fitnessOccasion_active %}
+              <li class="grid__item medium--one-half large--one-half">
+                <a href="/pages/get-inspired-category-fitness" class="categories--fitness">
+<!--                   <div class="categories--fitness-bg"></div> -->
+                  <h3>{{ 'get_inspired.categories.fitness' | t }}</h3>
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.maternityOccasion_active %}
+              <li class="grid__item medium--one-half large--one-half">
+                <a href="/pages/get-inspired-category-maternity" class="categories--maternity">
+<!--                   <div class="categories--maternity-bg"></div> -->
+                  <h3>{{ 'get_inspired.categories.maternity' | t }}</h3>
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        {% endif %}
         
       </div>
     </div>
