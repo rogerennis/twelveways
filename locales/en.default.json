@@ -355,6 +355,9 @@
       "log_in": "Log in",
       "create_account": "Create account"
     },
+    "pre_footer": {
+      "shop_now": "Shop now"
+    },
     "footer": {
       "navigation_title": "Quick Links",
       "customer_title": "Customer Care",
