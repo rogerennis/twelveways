@@ -296,7 +296,7 @@
       },
       {
         "type": "image",
-        "id": "slide_1_phone.jpg",
+        "id": "slider_1_phone.jpg",
         "label": "Upload phone image",
         "max-width": 828,
         "max-height": 340,
@@ -304,7 +304,7 @@
       },
       {
         "type": "image",
-        "id": "slide_1_tablet.jpg",
+        "id": "slider_1_tablet.jpg",
         "label": "Upload tablet image",
         "max-width": 1536,
         "max-height": 440,
@@ -312,7 +312,7 @@
       },
       {
         "type": "image",
-        "id": "slide_1_desktop.jpg",
+        "id": "slider_1_desktop.jpg",
         "label": "Upload desktop image",
         "max-width": 3100,
         "max-height": 540,
@@ -340,7 +340,7 @@
       },
       {
         "type": "image",
-        "id": "slide_2.jpg",
+        "id": "slider_2_phone.jpg",
         "label": "Upload phone image",
         "max-width": 828,
         "max-height": 340,
@@ -348,7 +348,7 @@
       },
       {
         "type": "image",
-        "id": "slide_2_tablet.jpg",
+        "id": "slider_2_tablet.jpg",
         "label": "Upload tablet image",
         "max-width": 1536,
         "max-height": 440,
@@ -356,7 +356,7 @@
       },
       {
         "type": "image",
-        "id": "slide_2_desktop.jpg",
+        "id": "slider_2_desktop.jpg",
         "label": "Upload desktop image",
         "max-width": 3100,
         "max-height": 540,
@@ -384,7 +384,7 @@
       },
       {
         "type": "image",
-        "id": "slide_3.jpg",
+        "id": "slider_3_phone.jpg",
         "label": "Upload phone image",
         "max-width": 828,
         "max-height": 340,
@@ -392,7 +392,7 @@
       },
       {
         "type": "image",
-        "id": "slide_3_tablet.jpg",
+        "id": "slider_3_tablet.jpg",
         "label": "Upload tablet image",
         "max-width": 1536,
         "max-height": 440,
@@ -400,7 +400,7 @@
       },
       {
         "type": "image",
-        "id": "slide_3_desktop.jpg",
+        "id": "slider_3_desktop.jpg",
         "label": "Upload desktop image",
         "max-width": 3100,
         "max-height": 540,

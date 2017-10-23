@@ -2,7 +2,7 @@
 assets/timber.scss.liquid:
   development: 2017-10-22T21:21:16-04:00   44d957a54d9fd160a89073704d022d73
 config/settings_schema.json:
-  development: 2017-10-21T22:47:43-04:00
+  development: 2017-10-22T22:55:23-04:00
 templates/index.liquid:
   development: 2017-10-22T21:23:36-04:00   c18c16e8136a07b46ea15f04cdcf738d
 templates/page.contact.liquid:
