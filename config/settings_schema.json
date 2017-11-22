@@ -299,24 +299,24 @@
         "id": "slider_1_phone.jpg",
         "label": "Upload phone image",
         "max-width": 828,
-        "max-height": 340,
-        "info": "828px x 340px .jpg hi-res at 72dpi required"
+        "max-height": 680,
+        "info": "828px x 680px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slider_1_tablet.jpg",
         "label": "Upload tablet image",
         "max-width": 1536,
-        "max-height": 440,
-        "info": "1536px x 440px .jpg hi-res at 72dpi required"
+        "max-height": 880,
+        "info": "1536px x 880px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slider_1_desktop.jpg",
         "label": "Upload desktop image",
         "max-width": 3100,
-        "max-height": 540,
-        "info": "3100px x 540px .jpg hi-res at 72dpi required"
+        "max-height": 1080,
+        "info": "3100px x 1080px .jpg hi-res at 72dpi required"
       },
       {
         "type": "text",
@@ -343,24 +343,24 @@
         "id": "slider_2_phone.jpg",
         "label": "Upload phone image",
         "max-width": 828,
-        "max-height": 340,
-        "info": "828px x 340px .jpg hi-res at 72dpi required"
+        "max-height": 680,
+        "info": "828px x 680px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slider_2_tablet.jpg",
         "label": "Upload tablet image",
         "max-width": 1536,
-        "max-height": 440,
-        "info": "1536px x 440px .jpg hi-res at 72dpi required"
+        "max-height": 880,
+        "info": "1536px x 880px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slider_2_desktop.jpg",
         "label": "Upload desktop image",
         "max-width": 3100,
-        "max-height": 540,
-        "info": "3100px x 540px .jpg hi-res at 72dpi required"
+        "max-height": 1080,
+        "info": "3100px x 1080px .jpg hi-res at 72dpi required"
       },
       {
         "type": "text",
@@ -387,24 +387,24 @@
         "id": "slider_3_phone.jpg",
         "label": "Upload phone image",
         "max-width": 828,
-        "max-height": 340,
-        "info": "640px x 680px .jpg hi-res at 72dpi required"
+        "max-height": 680,
+        "info": "828px x 680px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slider_3_tablet.jpg",
         "label": "Upload tablet image",
         "max-width": 1536,
-        "max-height": 440,
-        "info": "1536px x 440px .jpg hi-res at 72dpi required"
+        "max-height": 880,
+        "info": "1536px x 880px .jpg hi-res at 72dpi required"
       },
       {
         "type": "image",
         "id": "slider_3_desktop.jpg",
         "label": "Upload desktop image",
         "max-width": 3100,
-        "max-height": 540,
-        "info": "3100px x 540px .jpg hi-res at 72dpi required"
+        "max-height": 1080,
+        "info": "3100px x 1080px .jpg hi-res at 72dpi required"
       },
       {
         "type": "text",
